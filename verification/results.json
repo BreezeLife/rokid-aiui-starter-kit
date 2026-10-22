@@ -115,11 +115,14 @@
     "diagnosticTool": "npm run preview:diagnostic -- <demo>",
     "sourceChange": "Shortened Cook Along instructions to avoid English word/number splitting in the inspected layout.",
     "repository": "https://github.com/BreezeLife/rokid-aiui-starter-kit",
-    "publicationStatus": "prepared",
+    "publicationStatus": "PUBLISHED",
     "ci": {
       "status": "NOT_ENABLED",
       "reason": "Publishing credential lacks workflow write scope",
       "template": "docs/ci/verify.yml"
-    }
+    },
+    "sourcePublicationCommit": "1d58262d10f1f05d23b5f0f9ca38eae2c87bdbaf",
+    "remoteFilesMatched": 79,
+    "isTemplate": true
   }
 }

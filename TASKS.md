@@ -18,6 +18,6 @@
 - [ ] Produce original listing icons and actual Studio/device media before platform submission.
 
 ## Later
-- [ ] Publish and verify the authorized public `BreezeLife/rokid-aiui-starter-kit` source repository.
+- [x] Publish and verify the public `BreezeLife/rokid-aiui-starter-kit` source repository and enable Use this template.
 - [ ] Enable `docs/ci/verify.yml` as `.github/workflows/verify.yml` with a credential that has workflow write permission, then inspect actual CI results.
 - [ ] Add Stay Guide and City Scout after the first two starter workflows are exercised.
