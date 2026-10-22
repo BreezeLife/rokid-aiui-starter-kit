@@ -2,6 +2,8 @@
 
 [English](README.md) | 简体中文 | [日本語](README.ja.md)
 
+**Workshop 讲义：**[下载 4 页英文教程（PDF）](docs/workshop/rokid-aiui-workshop-tutorial-en.pdf)，用于 2026 年 10 月 24 日的活动。包含截图、安装命令、第一次修改练习和可选的 Live API 配置。[可编辑源文件与讲师说明](docs/workshop/README.md)。
+
 面向 Hackathon 的两个可编辑 AIUI 0.19.0 Demo 工程。先选一个已有的功能起点，再在编码工具中使用你的 [Rokid AIUI Agent DevKit Skill](https://github.com/BreezeLife/rokid-aiui-agent-skill)，把它改成自己的作品。
 
 **选择 Demo → 安装并加载 DevKit → 修改 → 验证 → 在 Studio 和眼镜上演示。**

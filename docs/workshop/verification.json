@@ -1,0 +1,33 @@
+{
+  "pages": 4,
+  "codeBlocksPreserved": 7,
+  "linkAnnotations": 8,
+  "urls": [
+    "https://github.com/BreezeLife/rokid-aiui-starter-kit/blob/main/demos/cook-along/media/demo.mp4",
+    "https://github.com/BreezeLife/rokid-aiui-starter-kit/blob/main/demos/style-lens/media/demo.mp4",
+    "https://github.com/BreezeLife/rokid-aiui-starter-kit",
+    "https://github.com/BreezeLife/rokid-aiui-starter-kit",
+    "http://127.0.0.1:8768/cook-along-diagnostic.html",
+    "http://127.0.0.1:8768/style-lens-diagnostic.html",
+    "https://github.com/BreezeLife/rokid-aiui-starter-kit/blob/main/demos/style-lens/server/README.md",
+    "https://github.com/BreezeLife/rokid-aiui-starter-kit/blob/main/demos/style-lens/server/README.md"
+  ],
+  "textBounds": "PASS",
+  "trackedPdfMatchesOutput": true,
+  "sha256": "a8bcf4c1dee57d719feeaac8ee568cd12b7f3d9e0796fa53346d6e7fed2c5dcf",
+  "bytes": 143704,
+  "preparedAt": "2026-10-23",
+  "workshopDate": "2026-10-24",
+  "language": "en",
+  "sourceRevision": "44587c6338a6569e1206d1df0ce0564ce6729a4f",
+  "visualReview": "All four pages rendered and visually inspected; no clipping or overlap.",
+  "contentReview": "Independent review of commands, routes, edit paths and verification limits passed.",
+  "localVerification": {
+    "testsPassed": 38,
+    "testsFailed": 0,
+    "strictValidation": "Both AIUI 0.19.0 app roots passed with no errors or warnings.",
+    "packaging": "Both AIX archives packed and listed successfully.",
+    "appSources": "Unchanged from sourceRevision.",
+    "audits": "Valid BLOCKED: Studio, glasses and real provider acceptance remain unexecuted."
+  }
+}

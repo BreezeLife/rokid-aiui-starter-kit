@@ -2,6 +2,8 @@
 
 English | [简体中文](README.zh-CN.md) | [日本語](README.ja.md)
 
+**Workshop handout:** [Download the 4-page English tutorial (PDF)](docs/workshop/rokid-aiui-workshop-tutorial-en.pdf) for 24 October 2026. Includes screenshots, setup commands, a first editing exercise and optional Live API setup. [Editable source and presenter notes](docs/workshop/README.md).
+
 Two editable AIUI 0.19.0 demo projects for a hackathon. Start with a working pattern, then use the [Rokid AIUI Agent DevKit Skill](https://github.com/BreezeLife/rokid-aiui-agent-skill) in your coding tool to make it your own.
 
 **Choose a demo → install and load the DevKit → modify → verify → demonstrate in Studio and on glasses.**

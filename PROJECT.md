@@ -9,6 +9,7 @@ Give hackathon participants complete, editable AIUI 0.19.0 projects and a clear 
 - `demos/style-lens/server/`: separately deployed vision API proxy; provider keys never belong in the AIUI app.
 - Each demo owns its tests, README, submission preparation, verification artifacts, and `media/` walkthrough/source captures outside `app/`.
 - Root README files in English, Simplified Chinese, and Japanese provide equivalent onboarding.
+- `docs/workshop/` contains the four-page English workshop PDF, editable content and reproducible renderer.
 - The external `BreezeLife/rokid-aiui-agent-skill` is a development tool, not a runtime dependency. Do not duplicate its Skill package here.
 
 ## Boundaries

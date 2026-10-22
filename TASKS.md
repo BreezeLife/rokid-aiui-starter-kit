@@ -14,6 +14,8 @@
 - [x] Add Style Lens Dockerfile/Compose deployment templates and verify isolated native startup, health and authentication behavior.
 - [x] Review all five requested starter deliverables in verification/hackathon-delivery.md.
 
+- [x] Create and visually inspect a four-page English workshop tutorial with real diagnostic screenshots, copyable commands, modification exercise, QR/link access and optional Live setup.
+
 ## External acceptance still required
 - [ ] Resolve or retest the unmodified Ink 0.19 preview startup failure.
 - [ ] Import exact app roots into authenticated AIUI Studio and capture declared surfaces.

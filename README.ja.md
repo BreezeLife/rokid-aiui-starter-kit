@@ -2,6 +2,8 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md) | 日本語
 
+**ワークショップ資料：**2026年10月24日向けの[4ページの英語チュートリアル（PDF）](docs/workshop/rokid-aiui-workshop-tutorial-en.pdf)。スクリーンショット、セットアップコマンド、最初の変更演習、任意の Live API 設定を掲載しています。[編集用ソースと講師向けメモ](docs/workshop/README.md)。
+
 ハッカソン向けの、編集可能な AIUI 0.19.0 デモプロジェクトを2つ用意しています。デモを出発点に、コーディングツールで [Rokid AIUI Agent DevKit Skill](https://github.com/BreezeLife/rokid-aiui-agent-skill) を使い、自分の作品に変更できます。
 
 **デモを選ぶ → DevKit をインストールして読み込む → 変更する → 検証する → Studio と眼鏡で実演する。**

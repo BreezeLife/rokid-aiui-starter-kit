@@ -1,0 +1,344 @@
+{
+  "title": "Rokid AIUI Workshop - From Starter to Your Own App",
+  "language": "en",
+  "workshopDate": "2026-10-24",
+  "sourceRevision": "44587c6338a6569e1206d1df0ce0564ce6729a4f",
+  "pages": [
+    {
+      "kicker": "01 / CHOOSE YOUR STARTING POINT",
+      "title": "Build your first<br/>Rokid AIUI demo",
+      "titleSize": 31,
+      "titleLeading": 35,
+      "subtitle": "Run a starter. Change one useful thing with the DevKit.<br/>Show your own working flow at the workshop.",
+      "blocks": [
+        {
+          "type": "demos",
+          "items": [
+            {
+              "title": "Cook Along",
+              "description": "A local recipe guide with step navigation and a pause/resume timer. No application API or key.",
+              "image": "verification/screenshots/cook-running-final.png",
+              "action": "<b>Try:</b> choose coffee, move to Bloom, start the timer, pause and resume.",
+              "url": "https://github.com/BreezeLife/rokid-aiui-starter-kit/blob/main/demos/cook-along/media/demo.mp4"
+            },
+            {
+              "title": "Style Lens",
+              "description": "Occasion-based garment advice. Start with bundled Sample tips; no camera, server or API key.",
+              "image": "verification/screenshots/style-sample-final.png",
+              "action": "<b>Try:</b> switch Work / Weekend / Evening, then Try Live and return to Sample.",
+              "url": "https://github.com/BreezeLife/rokid-aiui-starter-kit/blob/main/demos/style-lens/media/demo.mp4"
+            }
+          ],
+          "after": 12
+        },
+        {
+          "type": "small",
+          "text": "Screenshots: actual patched Ink 0.19 browser diagnostics. Videos are edited screenshot walkthroughs. Neither is Studio or glasses footage.",
+          "after": 13
+        },
+        {
+          "type": "note",
+          "text": "<b>Two repositories, two roles.</b> The Starter Kit contains editable AIUI apps. Your <b>Rokid AIUI Agent DevKit Skill</b> guides the coding assistant. Install the Skill once, then use it to modify either demo.",
+          "after": 14
+        },
+        {
+          "type": "heading",
+          "text": "Before you begin",
+          "after": 5
+        },
+        {
+          "type": "body",
+          "text": "Bring a laptop, a coding tool with Agent Skills, <b>Node.js 22.20+</b>, <b>Python 3</b> and Git. Printed commands use a macOS/Linux shell; prepare an equivalent Windows environment before class. Studio use also requires access to AIUI Studio.",
+          "size": 10,
+          "leading": 14,
+          "after": 15
+        },
+        {
+          "type": "resource",
+          "url": "https://github.com/BreezeLife/rokid-aiui-starter-kit",
+          "text": "Scan or click for source, multilingual READMEs and demo videos. Suggested hands-on loop: 5 min run, 15 min edit, 5 min check, 5 min show.",
+          "after": 0
+        }
+      ]
+    },
+    {
+      "kicker": "02 / INSTALL AND RUN",
+      "title": "Get to a visible baseline",
+      "subtitle": "Use the repository root for terminal commands. Start with a no-key flow.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "1. Get the project and install its tools",
+          "after": 6
+        },
+        {
+          "type": "code",
+          "lines": [
+            "node --version",
+            "python3 --version",
+            "git clone https://github.com/BreezeLife/rokid-aiui-starter-kit.git",
+            "cd rokid-aiui-starter-kit",
+            "npm ci --ignore-scripts --no-audit --no-fund"
+          ],
+          "size": 8.4,
+          "after": 10
+        },
+        {
+          "type": "heading",
+          "text": "2. Install and load your DevKit",
+          "after": 6
+        },
+        {
+          "type": "code",
+          "lines": [
+            "npx skills add BreezeLife/rokid-aiui-agent-skill \\",
+            "  --skill rokid-aiui-agent --agent codex --global",
+            "npx skills list --agent codex --global"
+          ],
+          "size": 8.4,
+          "after": 7
+        },
+        {
+          "type": "small",
+          "text": "Open this folder in your coding tool. The list should show <b>rokid-aiui-agent</b>. For Claude Code, replace <font name=\"Courier\">codex</font> with <font name=\"Courier\">claude-code</font> in both commands; for Cursor, use <font name=\"Courier\">cursor</font>.",
+          "after": 8
+        },
+        {
+          "type": "note",
+          "text": "<b>In coding chat:</b> invoke <font name=\"Courier\">$rokid-aiui-agent</font> in Codex, or <font name=\"Courier\">/rokid-aiui-agent</font> in Claude Code. In Cursor, select the Skill from <font name=\"Courier\">/</font>. Ask the assistant to read the project instructions and report its loaded <font name=\"Courier\">SKILL.md</font> path.",
+          "after": 11
+        },
+        {
+          "type": "heading",
+          "text": "3. Open the diagnostic browser walkthrough",
+          "after": 6
+        },
+        {
+          "type": "code",
+          "lines": [
+            "npm run preview:diagnostic -- cook-along",
+            "npm run preview:diagnostic -- style-lens",
+            "python3 -m http.server 8768 --bind 127.0.0.1 \\",
+            "  --directory output/previews"
+          ],
+          "size": 8.4,
+          "after": 6
+        },
+        {
+          "type": "small",
+          "text": "<link href=\"http://127.0.0.1:8768/cook-along-diagnostic.html\" color=\"#285C42\"><u>127.0.0.1:8768/cook-along-diagnostic.html</u></link><br/><link href=\"http://127.0.0.1:8768/style-lens-diagnostic.html\" color=\"#285C42\"><u>127.0.0.1:8768/style-lens-diagnostic.html</u></link>",
+          "after": 5
+        },
+        {
+          "type": "small",
+          "text": "Keep the server terminal open; Ctrl+C stops it. The first generation needs internet to download the pinned runtime. After an edit, regenerate that demo and reload.",
+          "after": 10
+        },
+        {
+          "type": "heading",
+          "text": "Using AIUI Studio?",
+          "after": 5
+        },
+        {
+          "type": "small",
+          "text": "Import only the folder containing <font name=\"Courier\">app.json</font>; open the Page in <font name=\"Courier\">_blank</font>.<br/><b>Cook:</b> <font name=\"Courier\">demos/cook-along/app</font> / Page <font name=\"Courier\">pages/index</font><br/><b>Style:</b> <font name=\"Courier\">demos/style-lens/app</font> / Page <font name=\"Courier\">pages/index/index</font>",
+          "after": 8
+        },
+        {
+          "type": "note",
+          "text": "<b>Preview status:</b> unmodified Ink 0.19 preview currently fails at startup. The diagnostic helper patches a separate local preview runtime. It supports layout/click practice; Studio and physical-glasses checks remain separate.",
+          "after": 0
+        }
+      ]
+    },
+    {
+      "kicker": "03 / MAKE IT YOURS",
+      "title": "Change these three places first",
+      "subtitle": "Start with content, then adjust the interface. Keep each app self-contained.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "Cook Along",
+          "after": 4
+        },
+        {
+          "type": "small",
+          "text": "Paths below are relative to <font name=\"Courier\">demos/cook-along/</font>.",
+          "after": 8
+        },
+        {
+          "type": "entrypoints",
+          "items": [
+            {
+              "title": "1 / Content data",
+              "path": "app/lib/recipes.js",
+              "description": "Recipe names, short instructions and timer durations."
+            },
+            {
+              "title": "2 / UI copy",
+              "path": "app/pages/index.ink",
+              "description": "Headings, buttons and step layout."
+            },
+            {
+              "title": "3 / Agent prompt",
+              "path": "app/AGENTS.md",
+              "description": "Runtime Agent guidance and Page-opening behavior."
+            }
+          ],
+          "after": 15
+        },
+        {
+          "type": "heading",
+          "text": "Style Lens",
+          "after": 4
+        },
+        {
+          "type": "small",
+          "text": "Paths below are relative to <font name=\"Courier\">demos/style-lens/</font>.",
+          "after": 8
+        },
+        {
+          "type": "entrypoints",
+          "items": [
+            {
+              "title": "1 / Sample data",
+              "path": "app/data/samples.js",
+              "description": "Bundled tips. Keep the Sample label visible."
+            },
+            {
+              "title": "2 / UI copy",
+              "path": "app/pages/index/index.ink",
+              "description": "Occasion controls, headings and result layout."
+            },
+            {
+              "title": "3 / API config",
+              "path": "app/config.js",
+              "description": "Private endpoint + team token. Leave blank for Sample."
+            }
+          ],
+          "after": 14
+        },
+        {
+          "type": "heading",
+          "text": "Copy this first exercise into your coding chat",
+          "after": 6
+        },
+        {
+          "type": "code",
+          "lines": [
+            "$rokid-aiui-agent",
+            "Read this project's AGENTS.md and continuity files, then load the",
+            "installed Skill and report its path. In demos/cook-along/app, adapt",
+            "the coffee preset into a short tea-brewing guide. Keep the existing",
+            "recipe IDs, AIUI 0.19.0, English UI, step navigation and timer behavior.",
+            "Update the runtime guidance to match. Keep all app dependencies",
+            "inside its app directory. Run npm run verify; report changed files",
+            "and actual results. Keep untested Studio and glasses checks BLOCKED."
+          ],
+          "size": 8.7,
+          "after": 11
+        },
+        {
+          "type": "note",
+          "text": "<b>See your change:</b> regenerate the chosen browser diagnostic, then reload it. In Studio, reimport your <b>edited local app directory</b>. For GitHub import, first push to your own repo/ref. Importing public <font name=\"Courier\">BreezeLife/main</font> again loads the original starter.",
+          "after": 12
+        },
+        {
+          "type": "body",
+          "text": "<b>Your 30-second share-back:</b> show the starting flow, one visible change, and the verification result. Each demo README contains three more copyable prompts. For Style Lens Live behavior, the model prompt is in <font name=\"Courier\">server/prompt.mjs</font>.",
+          "size": 10,
+          "leading": 14,
+          "after": 0
+        }
+      ]
+    },
+    {
+      "kicker": "04 / VERIFY AND EXTEND",
+      "title": "Check your change. Then go Live.",
+      "subtitle": "Sample mode is enough for the workshop. Live is an optional extension.",
+      "blocks": [
+        {
+          "type": "heading",
+          "text": "1. Verify from the Starter Kit root",
+          "after": 6
+        },
+        {
+          "type": "code",
+          "lines": [
+            "npm run verify",
+            "npm run pack"
+          ],
+          "size": 8.7,
+          "after": 7
+        },
+        {
+          "type": "small",
+          "text": "<b>verify</b> runs tests, strict AIUI 0.19 checks and capability inventory. <b>pack</b> also requires Bash and writes archives to <font name=\"Courier\">output/packages/</font>. Local results: <font name=\"Courier\">output/verification/local-results.json</font>. Baseline: 38 passing tests; this does not certify Studio or glasses.",
+          "after": 12
+        },
+        {
+          "type": "heading",
+          "text": "2. Optional: connect Style Lens to a vision provider",
+          "after": 6
+        },
+        {
+          "type": "body",
+          "text": "Keep Sample until your backend is ready. From the Starter Kit root, prepare the separate Node.js proxy:",
+          "size": 10,
+          "leading": 14,
+          "after": 6
+        },
+        {
+          "type": "code",
+          "lines": [
+            "cd demos/style-lens/server",
+            "cp -n .env.example .env",
+            "# Fill the private .env before starting (see below).",
+            "node --env-file=.env server.mjs"
+          ],
+          "size": 8.5,
+          "after": 6
+        },
+        {
+          "type": "small",
+          "text": "Set <font name=\"Courier\">VISION_API_KEY</font>, <font name=\"Courier\">VISION_MODEL</font>, <font name=\"Courier\">TEAM_TOKEN</font> and <font name=\"Courier\">TEAM_TOKEN_EXPIRES_AT</font>. The team token is 32-128 base64url characters; expiry must be within the next 24 hours. Generate fresh credentials near the session. Keep the provider key on the server.",
+          "after": 8
+        },
+        {
+          "type": "small",
+          "text": "Deploy behind reachable <b>HTTPS</b>; a laptop localhost URL is not a glasses endpoint. Follow the <link href=\"https://github.com/BreezeLife/rokid-aiui-starter-kit/blob/main/demos/style-lens/server/README.md\" color=\"#285C42\"><u>backend guide for token generation, health checks and Docker/Compose setup</u></link>. Then edit these fields in your private <font name=\"Courier\">demos/style-lens/app/config.js</font>:",
+          "after": 6
+        },
+        {
+          "type": "code",
+          "lines": [
+            "backendUrl: 'https://YOUR-HOST/api/style',",
+            "teamToken: 'YOUR_TEMPORARY_TEAM_TOKEN',"
+          ],
+          "size": 8.5,
+          "after": 7
+        },
+        {
+          "type": "small",
+          "text": "Verify from the root and reimport the edited app. Choose <b>Try Live, then Capture &amp; send</b>, grant camera permission and confirm the system preview. This sends the photo to your configured provider and may incur charges. Keep the configured app private; <b>Use Sample</b> is the fallback.",
+          "after": 12
+        },
+        {
+          "type": "heading",
+          "text": "If you get stuck",
+          "after": 5
+        },
+        {
+          "type": "small",
+          "text": "<b>Skill missing:</b> reload the tool; set <font name=\"Courier\">AIUI_SKILL_DIR</font> to the resolved Skill folder if needed.<br/><b>Old UI still showing:</b> regenerate the preview or check the imported local folder/repo/ref.<br/><b>Live setup / 401:</b> check the HTTPS endpoint, matching team token and fresh expiry.",
+          "after": 11
+        },
+        {
+          "type": "note",
+          "text": "<b>Presenter preflight:</b> run both no-key flows on the teaching laptop before the session; keep the two 30-second videos available. Studio, glasses, real camera/provider and Docker execution remain unverified in this starter. Use Sample unless you have tested your own Live setup.",
+          "after": 0
+        }
+      ]
+    }
+  ]
+}

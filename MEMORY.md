@@ -14,3 +14,5 @@
 - 2026-10-23: Walkthrough videos use actual diagnostic screenshots with permanent patched-runtime and edited-screenshot disclosures. Preserve original captures and hashes; never present these as real-time, Studio/device or live-provider recordings.
 - 2026-10-23: Style Lens includes a dependency-free Node proxy plus portable Dockerfile/Compose deployment templates. Native deployment-style checks passed; Docker was unavailable, so container/remote HTTPS/live-camera checks remain pending. Public app configuration stays blank and opens in Sample.
 - 2026-10-23: Published the completed five-item handoff to the existing public Starter Kit repository. Source/media commit 8c00ef3c7e1495c920116c3f64bf4820f84a3b86 was verified byte-for-byte across all 139 remote files.
+
+- 2026-10-23: The user requested a maximum four-page tutorial for the 24 October workshop and explicitly chose English for overseas participants. Keep the PDF, editable JSON and renderer in docs/workshop, with download links in all three root READMEs. Teach the no-key flows first; Live API setup is optional.
