@@ -1,0 +1,939 @@
+{
+  "claimedCapabilities": [
+    "event.bindtap@event-bindtap-2f2ddf7aac56",
+    "event.bindtap@event-bindtap-400fcf6a9460",
+    "event.bindtap@event-bindtap-4b48af6c0f1d",
+    "event.bindtap@event-bindtap-7adb71bc164c",
+    "event.bindtap@event-bindtap-b52ccc81c24a",
+    "event.bindtap@event-bindtap-e6ea16e47265",
+    "event.bindtap@event-bindtap-f2ed1a45634f",
+    "focus.element@focus-element-2fe4d249cb0e",
+    "focus.element@focus-element-335808933e65",
+    "focus.element@focus-element-69d365db7011",
+    "focus.element@focus-element-6eb8ec4789ca",
+    "focus.element@focus-element-84dac386a2f1",
+    "focus.element@focus-element-907e6c404e81",
+    "focus.element@focus-element-b1315c6750f7",
+    "focus.element@focus-element-b331aa5c800c",
+    "focus.element@focus-element-beedb01dc24b",
+    "focus.element@focus-element-d47426acf6fc",
+    "focus.element@focus-element-e5f27ae3b298",
+    "focus.element@focus-element-ef28d02358dc",
+    "focus.element@focus-element-f19335a7c2c7",
+    "focus.element@focus-element-f8dcbce7cac5",
+    "focus.host@focus-host-c1a828c01c51",
+    "media.camera.permission@media-camera-permission-dbdef438256b",
+    "media.camera.runtime@media-camera-runtime-9d437ab547c4",
+    "network.https@network-https-9a907edc65ec",
+    "page.lifecycle@page-lifecycle-25e0d4e6f274",
+    "page.lifecycle@page-lifecycle-85522de1a6f4",
+    "page.lifecycle@page-lifecycle-afdda7edd2d4",
+    "page.lifecycle@page-lifecycle-b045877a0231",
+    "page.route@page-route-77257a35d9d3",
+    "project.unregistered@unregistered-01a070bcab45",
+    "project.unregistered@unregistered-173affa20846",
+    "project.unregistered@unregistered-1dc66f75f647",
+    "project.unregistered@unregistered-492c7b92c442",
+    "project.unregistered@unregistered-5b725ae1e2b0",
+    "project.unregistered@unregistered-634f6558a584",
+    "project.unregistered@unregistered-724ba448a591",
+    "project.unregistered@unregistered-c1a305fabb29",
+    "project.unregistered@unregistered-cf774e66c799",
+    "project.unregistered@unregistered-d2109d85a43a",
+    "ui.button@ui-button-11b54d9da114",
+    "ui.button@ui-button-14f746ec9d79",
+    "ui.button@ui-button-3fb3218178c3",
+    "ui.button@ui-button-4bc5811d17b6",
+    "ui.button@ui-button-7acbb6ad1969",
+    "ui.button@ui-button-cd789bd30bb5",
+    "ui.button@ui-button-e9f4f494601b"
+  ],
+  "claimsLedger": {
+    "claimCount": 0,
+    "path": "aiui-audit-claims.json",
+    "present": true,
+    "scopeClosed": true,
+    "sha256": "7915876d20c8e426d23fef8dd7a1ed2834bdd8ff6390a9ee9f798f192fa0deb1"
+  },
+  "inputGates": [
+    {
+      "family": "event.bindtap",
+      "gate": "event-bindtap-2f2ddf7aac56",
+      "kind": "tap"
+    },
+    {
+      "family": "event.bindtap",
+      "gate": "event-bindtap-400fcf6a9460",
+      "kind": "tap"
+    },
+    {
+      "family": "event.bindtap",
+      "gate": "event-bindtap-4b48af6c0f1d",
+      "kind": "tap"
+    },
+    {
+      "family": "event.bindtap",
+      "gate": "event-bindtap-7adb71bc164c",
+      "kind": "tap"
+    },
+    {
+      "family": "event.bindtap",
+      "gate": "event-bindtap-b52ccc81c24a",
+      "kind": "tap"
+    },
+    {
+      "family": "event.bindtap",
+      "gate": "event-bindtap-e6ea16e47265",
+      "kind": "tap"
+    },
+    {
+      "family": "event.bindtap",
+      "gate": "event-bindtap-f2ed1a45634f",
+      "kind": "tap"
+    }
+  ],
+  "items": [
+    {
+      "apiBinding": "bindtap=useLive",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "event.bindtap",
+      "gate": "event-bindtap-2f2ddf7aac56",
+      "locations": [
+        {
+          "column": 105,
+          "line": 192,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindtap=useLive",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindtap=useSample",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "event.bindtap",
+      "gate": "event-bindtap-400fcf6a9460",
+      "locations": [
+        {
+          "column": 105,
+          "line": 195,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindtap=useSample",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindtap=selectWork",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "event.bindtap",
+      "gate": "event-bindtap-4b48af6c0f1d",
+      "locations": [
+        {
+          "column": 74,
+          "line": 180,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindtap=selectWork",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindtap=cancelCapture",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "event.bindtap",
+      "gate": "event-bindtap-7adb71bc164c",
+      "locations": [
+        {
+          "column": 94,
+          "line": 194,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindtap=cancelCapture",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindtap=selectWeekend",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "event.bindtap",
+      "gate": "event-bindtap-b52ccc81c24a",
+      "locations": [
+        {
+          "column": 77,
+          "line": 181,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindtap=selectWeekend",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindtap=selectEvening",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "event.bindtap",
+      "gate": "event-bindtap-e6ea16e47265",
+      "locations": [
+        {
+          "column": 77,
+          "line": 182,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindtap=selectEvening",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindtap=captureAndSend",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "event.bindtap",
+      "gate": "event-bindtap-f2ed1a45634f",
+      "locations": [
+        {
+          "column": 115,
+          "line": 193,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindtap=captureAndSend",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindfocus=focusSample",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-2fe4d249cb0e",
+      "locations": [
+        {
+          "column": 125,
+          "line": 195,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindfocus=focusSample",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindfocus=focusWeekend",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-335808933e65",
+      "locations": [
+        {
+          "column": 101,
+          "line": 181,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindfocus=focusWeekend",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindfocus=focusLive",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-69d365db7011",
+      "locations": [
+        {
+          "column": 123,
+          "line": 192,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindfocus=focusLive",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindblur=blurAction",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-6eb8ec4789ca",
+      "locations": [
+        {
+          "column": 145,
+          "line": 192,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindblur=blurAction",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindblur=blurAction",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-84dac386a2f1",
+      "locations": [
+        {
+          "column": 117,
+          "line": 180,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindblur=blurAction",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindfocus=focusCapture",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-907e6c404e81",
+      "locations": [
+        {
+          "column": 140,
+          "line": 193,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindfocus=focusCapture",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindfocus=focusWork",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-b1315c6750f7",
+      "locations": [
+        {
+          "column": 95,
+          "line": 180,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindfocus=focusWork",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindfocus=focusCancel",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-b331aa5c800c",
+      "locations": [
+        {
+          "column": 118,
+          "line": 194,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindfocus=focusCancel",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindblur=blurAction",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-beedb01dc24b",
+      "locations": [
+        {
+          "column": 142,
+          "line": 194,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindblur=blurAction",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindblur=blurAction",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-d47426acf6fc",
+      "locations": [
+        {
+          "column": 165,
+          "line": 193,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindblur=blurAction",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindblur=blurAction",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-e5f27ae3b298",
+      "locations": [
+        {
+          "column": 126,
+          "line": 181,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindblur=blurAction",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindblur=blurAction",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-ef28d02358dc",
+      "locations": [
+        {
+          "column": 149,
+          "line": 195,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindblur=blurAction",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindfocus=focusEvening",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-f19335a7c2c7",
+      "locations": [
+        {
+          "column": 101,
+          "line": 182,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindfocus=focusEvening",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "bindblur=blurAction",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.element",
+      "gate": "focus-element-f8dcbce7cac5",
+      "locations": [
+        {
+          "column": 126,
+          "line": 182,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "bindblur=blurAction",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": ":host-focus",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "focus.host",
+      "gate": "focus-host-c1a828c01c51",
+      "locations": [
+        {
+          "column": 7,
+          "line": 202,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": ":host-focus",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "app.json#permissions",
+      "declarationBinding": "CAMERA",
+      "family": "media.camera.permission",
+      "gate": "media-camera-permission-dbdef438256b",
+      "locations": [
+        {
+          "column": 1,
+          "line": 1,
+          "path": "app.json"
+        }
+      ],
+      "mechanism": "app.json#permissions:CAMERA",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "navigator.mediaDevices.getUserMedia(video=true)",
+      "declarationBinding": "CAMERA",
+      "family": "media.camera.runtime",
+      "gate": "media-camera-runtime-9d437ab547c4",
+      "locations": [
+        {
+          "column": 28,
+          "line": 117,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "navigator.mediaDevices.getUserMedia",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "fetch(...)",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "network.https",
+      "gate": "network-https-9a907edc65ec",
+      "locations": [
+        {
+          "column": 30,
+          "line": 134,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "fetch",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "CALLBACK:onUnload",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "page.lifecycle",
+      "gate": "page-lifecycle-25e0d4e6f274",
+      "locations": [
+        {
+          "column": 3,
+          "line": 50,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "CALLBACK:onUnload",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "CALLBACK:onHide",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "page.lifecycle",
+      "gate": "page-lifecycle-85522de1a6f4",
+      "locations": [
+        {
+          "column": 3,
+          "line": 46,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "CALLBACK:onHide",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "CALLBACK:onShow",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "page.lifecycle",
+      "gate": "page-lifecycle-afdda7edd2d4",
+      "locations": [
+        {
+          "column": 3,
+          "line": 45,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "CALLBACK:onShow",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "CALLBACK:onLoad",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "page.lifecycle",
+      "gate": "page-lifecycle-b045877a0231",
+      "locations": [
+        {
+          "column": 3,
+          "line": 35,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "CALLBACK:onLoad",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "app.json#pages:pages/index/index",
+      "declarationBinding": "pages",
+      "family": "page.route",
+      "gate": "page-route-77257a35d9d3",
+      "locations": [
+        {
+          "column": 1,
+          "line": 1,
+          "path": "app.json"
+        }
+      ],
+      "mechanism": "app.json#pages:pages/index/index",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "PROJECT-SYMBOL:REFERENCE:navigator.mediaDevices",
+      "declarationBinding": "UNKNOWN — source policy not registered",
+      "family": "project.unregistered",
+      "gate": "unregistered-01a070bcab45",
+      "locations": [
+        {
+          "column": 46,
+          "line": 102,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "REFERENCE:navigator.mediaDevices",
+      "policyState": "unregistered",
+      "versionFeature": "unresolved"
+    },
+    {
+      "apiBinding": "PROJECT-SYMBOL:ImageCapture(...)",
+      "declarationBinding": "UNKNOWN — source policy not registered",
+      "family": "project.unregistered",
+      "gate": "unregistered-173affa20846",
+      "locations": [
+        {
+          "column": 27,
+          "line": 122,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "ImageCapture(...)",
+      "policyState": "unregistered",
+      "versionFeature": "unresolved"
+    },
+    {
+      "apiBinding": "PROJECT-SYMBOL:media-cleanup-association",
+      "declarationBinding": "UNKNOWN — source policy not registered",
+      "family": "project.unregistered",
+      "gate": "unregistered-1dc66f75f647",
+      "locations": [
+        {
+          "column": 23,
+          "line": 23,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "media-cleanup-association",
+      "policyState": "unregistered",
+      "versionFeature": "unresolved"
+    },
+    {
+      "apiBinding": "PROJECT-SYMBOL:clearTimeout(...)",
+      "declarationBinding": "UNKNOWN — source policy not registered",
+      "family": "project.unregistered",
+      "gate": "unregistered-492c7b92c442",
+      "locations": [
+        {
+          "column": 35,
+          "line": 82,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "clearTimeout(...)",
+      "policyState": "unregistered",
+      "versionFeature": "unresolved"
+    },
+    {
+      "apiBinding": "PROJECT-SYMBOL:app.json#window.navigationBarTitleText=Style Lens",
+      "declarationBinding": "UNKNOWN — source policy not registered",
+      "family": "project.unregistered",
+      "gate": "unregistered-5b725ae1e2b0",
+      "locations": [
+        {
+          "column": 1,
+          "line": 1,
+          "path": "app.json"
+        }
+      ],
+      "mechanism": "app.json#window.navigationBarTitleText=Style Lens",
+      "policyState": "unregistered",
+      "versionFeature": "unresolved"
+    },
+    {
+      "apiBinding": "PROJECT-SYMBOL:REFERENCE:navigator.mediaDevices.getUserMedia",
+      "declarationBinding": "UNKNOWN — source policy not registered",
+      "family": "project.unregistered",
+      "gate": "unregistered-634f6558a584",
+      "locations": [
+        {
+          "column": 16,
+          "line": 103,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "REFERENCE:navigator.mediaDevices.getUserMedia",
+      "policyState": "unregistered",
+      "versionFeature": "unresolved"
+    },
+    {
+      "apiBinding": "PROJECT-SYMBOL:REFERENCE:navigator",
+      "declarationBinding": "UNKNOWN — source policy not registered",
+      "family": "project.unregistered",
+      "gate": "unregistered-724ba448a591",
+      "locations": [
+        {
+          "column": 16,
+          "line": 102,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "REFERENCE:navigator",
+      "policyState": "unregistered",
+      "versionFeature": "unresolved"
+    },
+    {
+      "apiBinding": "PROJECT-SYMBOL:REFERENCE:fetch",
+      "declarationBinding": "UNKNOWN — source policy not registered",
+      "family": "project.unregistered",
+      "gate": "unregistered-c1a305fabb29",
+      "locations": [
+        {
+          "column": 16,
+          "line": 104,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "REFERENCE:fetch",
+      "policyState": "unregistered",
+      "versionFeature": "unresolved"
+    },
+    {
+      "apiBinding": "PROJECT-SYMBOL:REFERENCE:ImageCapture",
+      "declarationBinding": "UNKNOWN — source policy not registered",
+      "family": "project.unregistered",
+      "gate": "unregistered-cf774e66c799",
+      "locations": [
+        {
+          "column": 77,
+          "line": 103,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "REFERENCE:ImageCapture",
+      "policyState": "unregistered",
+      "versionFeature": "unresolved"
+    },
+    {
+      "apiBinding": "PROJECT-SYMBOL:setTimeout(...)",
+      "declarationBinding": "UNKNOWN — source policy not registered",
+      "family": "project.unregistered",
+      "gate": "unregistered-d2109d85a43a",
+      "locations": [
+        {
+          "column": 23,
+          "line": 112,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "setTimeout(...)",
+      "policyState": "unregistered",
+      "versionFeature": "unresolved"
+    },
+    {
+      "apiBinding": "<button ...>",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "ui.button",
+      "gate": "ui-button-11b54d9da114",
+      "locations": [
+        {
+          "column": 5,
+          "line": 192,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "<button>",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "<button ...>",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "ui.button",
+      "gate": "ui-button-14f746ec9d79",
+      "locations": [
+        {
+          "column": 5,
+          "line": 182,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "<button>",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "<button ...>",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "ui.button",
+      "gate": "ui-button-3fb3218178c3",
+      "locations": [
+        {
+          "column": 5,
+          "line": 181,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "<button>",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "<button ...>",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "ui.button",
+      "gate": "ui-button-4bc5811d17b6",
+      "locations": [
+        {
+          "column": 5,
+          "line": 195,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "<button>",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "<button ...>",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "ui.button",
+      "gate": "ui-button-7acbb6ad1969",
+      "locations": [
+        {
+          "column": 5,
+          "line": 180,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "<button>",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "<button ...>",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "ui.button",
+      "gate": "ui-button-cd789bd30bb5",
+      "locations": [
+        {
+          "column": 5,
+          "line": 193,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "<button>",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    },
+    {
+      "apiBinding": "<button ...>",
+      "declarationBinding": "NONE REQUIRED",
+      "family": "ui.button",
+      "gate": "ui-button-e9f4f494601b",
+      "locations": [
+        {
+          "column": 5,
+          "line": 194,
+          "path": "pages/index/index.ink"
+        }
+      ],
+      "mechanism": "<button>",
+      "policyState": "registered",
+      "versionFeature": "stable-0.17"
+    }
+  ],
+  "policyVersion": "aiui-0.19-inventory-v1",
+  "projectRevision": "WORKTREE:c29724b24c4f70213f50ec0ffbb29141941b27a9a94a7b967b99ade067e6a218",
+  "schemaVersion": 2,
+  "supportedSurfaces": [
+    "Page"
+  ],
+  "targetVersion": "0.19.0",
+  "unmatchedSymbols": [
+    {
+      "column": 46,
+      "family": "project.unregistered",
+      "gate": "unregistered-01a070bcab45",
+      "line": 102,
+      "path": "pages/index/index.ink",
+      "symbol": "REFERENCE:navigator.mediaDevices"
+    },
+    {
+      "column": 27,
+      "family": "project.unregistered",
+      "gate": "unregistered-173affa20846",
+      "line": 122,
+      "path": "pages/index/index.ink",
+      "symbol": "ImageCapture"
+    },
+    {
+      "column": 23,
+      "family": "project.unregistered",
+      "gate": "unregistered-1dc66f75f647",
+      "line": 23,
+      "path": "pages/index/index.ink",
+      "symbol": "media-cleanup-association"
+    },
+    {
+      "column": 35,
+      "family": "project.unregistered",
+      "gate": "unregistered-492c7b92c442",
+      "line": 82,
+      "path": "pages/index/index.ink",
+      "symbol": "clearTimeout"
+    },
+    {
+      "column": 1,
+      "family": "project.unregistered",
+      "gate": "unregistered-5b725ae1e2b0",
+      "line": 1,
+      "path": "app.json",
+      "symbol": "app.json#window.navigationBarTitleText=Style Lens"
+    },
+    {
+      "column": 16,
+      "family": "project.unregistered",
+      "gate": "unregistered-634f6558a584",
+      "line": 103,
+      "path": "pages/index/index.ink",
+      "symbol": "REFERENCE:navigator.mediaDevices.getUserMedia"
+    },
+    {
+      "column": 16,
+      "family": "project.unregistered",
+      "gate": "unregistered-724ba448a591",
+      "line": 102,
+      "path": "pages/index/index.ink",
+      "symbol": "REFERENCE:navigator"
+    },
+    {
+      "column": 16,
+      "family": "project.unregistered",
+      "gate": "unregistered-c1a305fabb29",
+      "line": 104,
+      "path": "pages/index/index.ink",
+      "symbol": "REFERENCE:fetch"
+    },
+    {
+      "column": 77,
+      "family": "project.unregistered",
+      "gate": "unregistered-cf774e66c799",
+      "line": 103,
+      "path": "pages/index/index.ink",
+      "symbol": "REFERENCE:ImageCapture"
+    },
+    {
+      "column": 23,
+      "family": "project.unregistered",
+      "gate": "unregistered-d2109d85a43a",
+      "line": 112,
+      "path": "pages/index/index.ink",
+      "symbol": "setTimeout"
+    }
+  ],
+  "versionViolations": []
+}

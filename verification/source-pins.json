@@ -1,0 +1,26 @@
+{
+  "recordedDate": "2026-10-23",
+  "aiuiTarget": "0.19.0",
+  "officialSource": {
+    "repository": "https://github.com/yodaos-project/AIUI",
+    "revision": "7d62c2d9ac1cdc1389ba06ed0651b395903accff"
+  },
+  "devKit": {
+    "repository": "https://github.com/BreezeLife/rokid-aiui-agent-skill",
+    "revision": "d9fe8f9a82891640351cdcf5515b4c17689df95a",
+    "packagePath": "skills/rokid-aiui-agent",
+    "files": {
+      "SKILL.md": "2c8d131cbb8171bf2d5270d30ea9d5541dc352d0dd5b6c62b211d3218d3709a4",
+      "references/aiui-0.19.md": "d07cfc02bd0764330cfe723a55f7a7d04915e631969fe77620651d341d03a5d7",
+      "references/project-anatomy.md": "a49ca0fddbd3024564a75f653d8a210b3e86af75ca85d392f1c6059d21d35fb3",
+      "references/ink-authoring.md": "f7d0b4f1ef729566871d2db00576a8b6ecf58ff7116db3d213a4fa9fe2e192ee",
+      "references/runtime-capabilities.md": "da5ed3e479736b24d21a00dc1d8ea589af2b7e973d4570e4a9943046afa92a4f",
+      "references/interaction-and-design.md": "c9106682b99c84e318676dd81dee5ea76c0089ca6c600a376c0216458e0b27e2",
+      "references/aix-workflow.md": "7c61376f0cb42979b2c3ffb526fd3079ddfe3b31fa09ad58679190b9ddf5fa77",
+      "references/ux-and-capability-testing.md": "3b929de833700dddc10bac6f00e136b74696273f3bb4c19481d66bad067493f6",
+      "references/submission-preparation.md": "3c5cae7c1fcc6cc53abd3044e6fab97986511d7d038b03254b0542a552ad6e49"
+    }
+  },
+  "aixCli": "0.8.2",
+  "note": "AIX HTML uses a network browser runtime; CLI pin does not pin that runtime. Runtime observations are recorded separately."
+}

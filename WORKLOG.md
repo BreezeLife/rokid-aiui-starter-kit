@@ -1,0 +1,15 @@
+# Worklog
+
+## 2026-10-23
+- Created a separate sibling project after the user approved the Starter Kit plus external DevKit Skill workflow.
+- Confirmed AIUI 0.19.0 as the target and two initial demos: Cook Along and Style Lens.
+- Began parallel implementation and multilingual onboarding. Verification outcomes will be appended after execution.
+- Completed both independent AIUI 0.19.0 source roots and nine equivalent English/Chinese/Japanese READMEs. The external DevKit remains a development dependency only; no Skill package was copied into this project.
+- Ran the final combined local verification with Node.js 24.19.0: 38/38 behavior/proxy tests passed; both strict source validations returned no errors or warnings. Independent implementation and documentation reviews found no remaining material issues.
+- Native AIX 0.8.2 HTML exports resolved browser Ink 0.19.0 and failed in SDK construction before app loading. Preserved actual failure text and screenshots. A separate diagnostic runtime patch allowed limited full-screen render/click checks, revealing layout-wrapper and conditional-rendering issues that were fixed before final source capture.
+- Confirmed diagnostic Cook Along selection, timer pause/resume/reset, completion and return; confirmed Style Lens Sample occasion change and missing-config recovery. No Studio, glasses, keyboard-host routing, real camera or paid model pass is claimed.
+- Final DevKit delivery guard packed/listed both exact source snapshots. Cook Along archive is 17,639 bytes; Style Lens is 17,810 bytes. Final fingerprints, archive hashes, preview/source equality and captures are recorded in verification/results.json and verification/README.md.
+- Regenerated reconciled blocked audits: Cook Along 18 UX / 47 capability rows; Style Lens 16 UX / 47 capability rows. Both validators returned expected exit 2. Prepared source-bound submission drafts and pending real media plans. Release-ready remains NO.
+- Kept this delivery local, with no remote repository publication, deployed service, platform submission or provider charge.
+- Prepared authorized public GitHub publication with nine screenshot-bearing READMEs, clone/import instructions and pinned CI. Rechecked functionality (38/38), reviewed both app/proxy sources and publication files, and shortened recipe copy after observing English word/number splitting in the diagnostic UI. Final source/package identities and refreshed captures are in verification/results.json. Added a reproducible optional diagnostic command with pinned download and patch hashes, safe extraction, cold/cache checks and tamper rejection. Native preview limitations and unverified Studio/device/live-provider checks remain explicit.
+- Created the public GitHub repository. Git transport failed with HTTP/2 and low-speed timeout errors. GitHub API upload isolated a credential limitation on workflow files; preserved the prepared CI as docs/ci/verify.yml, while publishing ordinary source and screenshots through the Git Data API. CI is not active or claimed passing.

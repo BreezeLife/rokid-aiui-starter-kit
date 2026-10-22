@@ -1,0 +1,10 @@
+{
+  "package": "@yodaos-pkg/ink",
+  "version": "0.19.0",
+  "tarball": "https://registry.npmjs.org/@yodaos-pkg/ink/-/ink-0.19.0.tgz",
+  "npmIntegrity": "sha512-rMHFLAjHM7UxrHx1pM4Pldvl8jgioF64rrbkw2cbkzCB1qqdKRpIe/OC8gjGZaCodRlxDw0gLm77ZDUMuV0ifA==",
+  "tarballSha256": "00ec6166713b9b0b19ec674fc058d3032f176e663f8dc46dc728b40e6742a8b2",
+  "originalIndexSha256": "cb6e58994b1086d21ccfad8561a6b8184961f724fa9a107f1b5a0b3c3eddda0f",
+  "patchedIndexSha256": "a3b1e7ea4dc736ae269fed4c5605cc86cc3b57f13ddae68733c4de42d285c614",
+  "purpose": "Temporary diagnostic preview only; native AIX preview failure remains recorded; no change to app source or installed CLI"
+}

@@ -1,0 +1,17 @@
+--- official-0.19.0/index.js
++++ diagnostic-0.19.0/index.js
+@@ -2736,12 +2736,14 @@
+       themeCss,
+       Boolean(config.systemAgent),
+       Boolean(config.permissionChecks),
++      false, // DIAGNOSTIC ONLY: permission_requests introduced in raw 0.19 binding.
+       loopbackRoutingPolicy,
+       configuredNavigatorHost,
+       normalizeHostPackages(config.hostPackages),
+       normalizeHostFontsDir(config.hostFontsDir),
+       displayColor.mode,
+       displayColor.bits,
++      undefined, // DIAGNOSTIC ONLY: raw 0.19 script_execution default.
+     );
+     const view = new InkView(rawView, config);
+     const initialSurface =

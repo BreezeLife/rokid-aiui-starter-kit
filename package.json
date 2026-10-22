@@ -1,0 +1,15 @@
+{
+  "name": "rokid-aiui-starter-kit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.20.0" },
+  "scripts": {
+    "test": "node scripts/test.mjs",
+    "verify": "node scripts/verify.mjs",
+    "pack": "node scripts/pack.mjs",
+    "preview": "node scripts/preview.mjs",
+    "preview:diagnostic": "node scripts/preview-diagnostic.mjs"
+  },
+  "devDependencies": { "@yodaos-pkg/aix-cli": "0.8.2" }
+}

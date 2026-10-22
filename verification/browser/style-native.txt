@@ -1,0 +1,29 @@
+Browser tab: 1, Title: "Style Lens - AIX Preview", URL: "http://127.0.0.1:8768/style-lens.html".
+1 AXWebArea Style Lens - AIX Preview, URL: 127.0.0.1:8768/style-lens.html
+	2 container
+		3 text AIX PREVIEW
+		4 heading Style Lens, Value: 1, ID: preview-title
+			5 text Style Lens
+		6 text Source:
+		7 text app
+		8 text Version:
+		9 text Unknown
+		10 text Files:
+		11 text 8
+		12 image Description: AIX preview canvas, ID: preview-canvas
+		13 container
+			20 text Preview failed to start.
+
+TypeError: Cannot read properties of null (reading 'length')
+    at w (https://esm.sh/@yodaos-pkg/ink@0.19.0/es2022/ink.mjs:3:1415)
+    at new Y (https://esm.sh/@yodaos-pkg/ink@0.19.0/es2022/ink.mjs:2:20402)
+    at n.create (https://esm.sh/@yodaos-pkg/ink@0.19.0/es2022/ink.mjs:3:51009)
+    at async mountState (http://127.0.0.1:8768/style-lens.html:440:22)
+    at async boot (http://127.0.0.1:8768/style-lens.html:511:9)
+			15 container Preview controls
+				16 button Backspace
+				17 button Enter
+				18 button ArrowUp
+				19 button ArrowDown
+
+The focused UI element is 1 AXWebArea Style Lens - AIX Preview, URL: 127.0.0.1:8768/style-lens.html

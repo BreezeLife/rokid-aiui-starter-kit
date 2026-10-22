@@ -1,0 +1,46 @@
+✔ first open exposes two local presets and invalid inputs recover to selection (6.543458ms)
+✔ recipe button uses the documented attributes payload, rejects a stale or missing id (0.496708ms)
+✔ each preset completes and supports previous step, restart, and recipe selection (1.7945ms)
+✔ timer uses clock deadlines, pauses precisely, resumes and resets without duplicates (0.658416ms)
+✔ expiry stops work without advancing a step; restart timer starts a full duration (0.447708ms)
+✔ hidden Page stops callbacks and reconciles an elapsed deadline when shown (0.471292ms)
+✔ a paused timer remains paused across hide/show (0.424958ms)
+✔ step navigation and recipe reset cancel the old countdown (0.427791ms)
+✔ unload cancels work and all stale callbacks/actions leave the disposed Page unchanged (0.805ms)
+✔ focus feedback follows real button identity while native host keys remain available (0.448083ms)
+✔ every markup tap/focus/blur handler resolves to shipped Page logic (0.499875ms)
+✔ all presets fit the content contract and timers are bounded; no external API occurs (2.907709ms)
+✔ Sample is the default: occasion changes and even capture action make no request (2.824416ms)
+✔ missing/invalid query recover to Work; valid occasion is honored (3.156375ms)
+✔ Live must be explicitly selected and configured before opening a camera (0.918458ms)
+✔ Live sends captured bytes with bearer token and stops camera before request (1.489083ms)
+✔ denied and unavailable camera give usable Sample recovery without a request (1.339375ms)
+✔ capture rejection and oversized image stop tracks and clear timers (0.932625ms)
+✔ timeout before permission resolves releases a late stream without sending (0.477167ms)
+✔ Cancel during capture stops tracks and prevents late upload (4.460166ms)
+✔ hide aborts network, reopen permits retry, stale response cannot replace newer advice (2.475959ms)
+✔ unload and Sample while loading suppress every late state update (2.344792ms)
+✔ invalid server reply and expired token yield a retry path (1.095417ms)
+✔ base64 encoding handles padding and multiple chunks; advice is bounded (5.434583ms)
+✔ HTTP proxy sends vision request only to configured provider and returns validated suggestions (28.380459ms)
+✔ authentication rejects missing, wrong, and expired team tokens before provider access (8.632833ms)
+✔ malformed JSON, unsupported images, signature mismatch, occasion injection and remote URLs are rejected (16.045875ms)
+✔ oversized JSON is rejected before any upstream request (6.7285ms)
+✔ upstream failure never leaks its error body or provider key (5.644916ms)
+✔ invalid model JSON and more than three/overlong suggestions are rejected (16.258166ms)
+✔ documented env-file CLI starts a local server without making a model call (62.043375ms)
+✔ upstream timeout includes stalled response body, aborts request, and yields safe 504 (44.164834ms)
+✔ oversized provider response is bounded (4.151875ms)
+✔ non-JSON provider content is rejected without echoing its content (3.918666ms)
+✔ client disconnect cancels the in-flight provider request (6.632458ms)
+✔ CORS is closed by default and allows one configured preview origin (4.527875ms)
+✔ concurrency bound prevents an extra provider request (154.482167ms)
+✔ production configuration requires model, HTTPS, expiring token and defaults to loopback (0.970417ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 38
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 452.336833

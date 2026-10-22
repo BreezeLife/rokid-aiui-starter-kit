@@ -1,0 +1,97 @@
+name: Verify demos
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    name: Test, validate and package
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      AIUI_SKILL_DIR: ${{ github.workspace }}/.ci/rokid-aiui-agent-skill/skills/rokid-aiui-agent
+      PYTHONDONTWRITEBYTECODE: "1"
+
+    steps:
+      - name: Checkout Starter Kit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Checkout pinned external DevKit
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: BreezeLife/rokid-aiui-agent-skill
+          ref: d9fe8f9a82891640351cdcf5515b4c17689df95a
+          path: .ci/rokid-aiui-agent-skill
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: "24.19.0"
+          cache: npm
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install locked AIX CLI
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      # verify runs all Node behavior/proxy tests, then strict source validation,
+      # source fingerprints and capability inventories for both import roots.
+      - name: Run tests and strict AIUI 0.19 verification
+        run: npm run verify
+
+      # audit.py exits 0 only after each DevKit audit validator returns the
+      # expected structurally valid BLOCKED exit 2. It never grants release PASS.
+      - name: Generate and validate explicitly blocked release audits
+        run: python3 scripts/audit.py
+
+      - name: Pack and inspect both exact source snapshots
+        run: npm run pack
+
+      # HTML export does not execute a browser or establish rendered-preview PASS.
+      - name: Export preview HTML only
+        run: |
+          npm run preview -- cook-along
+          npm run preview -- style-lens
+
+      - name: Preserve available checks, packages and HTML exports
+        if: always()
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        with:
+          name: starter-kit-checks-${{ github.sha }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            output/verification/
+            output/packages/*.aix
+            output/previews/*.html
+            demos/*/verification/AUDIT.md
+            demos/*/verification/inventory.json
+            demos/*/verification/audit-validation.txt
+
+      - name: Explain verification boundaries
+        if: always()
+        run: |
+          cat <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          This workflow checks local behavior, strict AIUI source structure,
+          source-bound blocked audits, AIX pack/list and preview HTML export.
+          HTML export is not a rendered browser preview. The recorded unmodified
+          preview startup failure remains unresolved by these CI checks.
+          Studio, physical glasses and the live vision provider are not exercised.
+          A successful workflow does not mean the demos are release-ready.
+          EOF

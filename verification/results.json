@@ -1,0 +1,125 @@
+{
+  "target": "AIUI 0.19.0",
+  "checkedAt": "2026-10-22T18:38:40.872Z",
+  "demos": {
+    "cook-along": {
+      "structure": "PASS",
+      "fingerprint": "WORKTREE:5387d8ed2b6e372f04512267f1569bdf8f971d948738f9878129a78018af3e0e",
+      "capabilities": 47,
+      "unmatchedSymbols": 3,
+      "capabilityPolicy": "BLOCKED",
+      "package": {
+        "path": "output/packages/cook-along-2026-10-22T18-38-44-341Z.aix",
+        "bytes": 17417,
+        "sha256": "abb32eb83f51aa250952b69af6d2e890539cb772c5e5c05ddda25a97f1b2074e",
+        "packAndList": "PASS"
+      },
+      "nativeHtml": {
+        "path": "output/previews/cook-along.html",
+        "sha256": "00ad2f6eaa23791a666a8186617e4a9a7e3273e669943fa36485ee6029a11fb9",
+        "embeddedFilesMatchFinalApp": true
+      },
+      "diagnosticHtml": {
+        "path": "output/previews/cook-along-diagnostic.html",
+        "sha256": "c981d01787e802c661b43f911c1b652554bf3ca1d5fdb911f41ce84af0955e50",
+        "embeddedFilesMatchFinalApp": true
+      }
+    },
+    "style-lens": {
+      "structure": "PASS",
+      "fingerprint": "WORKTREE:c29724b24c4f70213f50ec0ffbb29141941b27a9a94a7b967b99ade067e6a218",
+      "capabilities": 47,
+      "unmatchedSymbols": 10,
+      "capabilityPolicy": "BLOCKED",
+      "package": {
+        "path": "output/packages/style-lens-2026-10-22T18-38-44-341Z.aix",
+        "bytes": 17810,
+        "sha256": "3021884c320c0276f9b875007aa1a9bad7850fdbed4ea1c261474ac519e565b2",
+        "packAndList": "PASS"
+      },
+      "nativeHtml": {
+        "path": "output/previews/style-lens.html",
+        "sha256": "8fe0e38f855b7a087f909a0157390343b4090f105aa7f3b12f8b66df086ebb1f",
+        "embeddedFilesMatchFinalApp": true
+      },
+      "diagnosticHtml": {
+        "path": "output/previews/style-lens-diagnostic.html",
+        "sha256": "5af8194b4ee0aec99fc418276fd7d7cc5ef9bbe8ea1d7b0393425ef438c1e959",
+        "embeddedFilesMatchFinalApp": true
+      }
+    }
+  },
+  "releaseReady": false,
+  "remaining": [
+    "Authenticated AIUI Studio import",
+    "Physical glasses input and optics",
+    "Style Lens live provider request",
+    "Version-specific capability policy and trusted evidence"
+  ],
+  "tests": {
+    "passed": 38,
+    "failed": 0,
+    "cookAlong": 12,
+    "styleLens": 26
+  },
+  "aixCli": "0.8.2",
+  "nativePreview": {
+    "result": "FAIL",
+    "resolvedInkVersion": "0.19.0",
+    "error": "TypeError: Cannot read properties of null (reading 'length')",
+    "phase": "bootstrap before app loading"
+  },
+  "diagnosticPreview": {
+    "result": "LIMITED_OBSERVATIONS",
+    "modifiedRuntime": true,
+    "target": "_blank",
+    "canvasPixels": [
+      480,
+      352
+    ],
+    "studioOrDeviceEvidence": false
+  },
+  "captures": {
+    "verification/screenshots/cook-native.png": {
+      "sha256": "2463610966315f77c22445963113713f89965b105393e96b6f09f62d00c04b34",
+      "bytes": 47077
+    },
+    "verification/screenshots/style-native.png": {
+      "sha256": "c227e669005e98c37e3096479ec8bc462930c5d27c1044786a0ee72769ba6357",
+      "bytes": 46485
+    },
+    "verification/screenshots/cook-running-final.png": {
+      "sha256": "c8efeaa8cac462e21a420c8122a9ee8a4ceaa9b43a42bae15854cd8f4b7f2280",
+      "bytes": 52651
+    },
+    "verification/screenshots/style-sample-final.png": {
+      "sha256": "6385230be0eab367998bea3c0c2fd03af686f85e0521bdf3ca7ecdbea1b102ca",
+      "bytes": 52508
+    },
+    "verification/screenshots/publication-style-evening.png": {
+      "sha256": "9a78dc34dba75ff4a4b12240daf21967ed45752da4b4b7f11d13fcdec31b9639",
+      "bytes": 54606
+    },
+    "verification/screenshots/publication-style-setup.png": {
+      "sha256": "8e6b3499045eacc2ea82e8653ef2559fad882163de0b566268402e44dadb07ee",
+      "bytes": 48073
+    },
+    "verification/screenshots/cook-complete-final.png": {
+      "sha256": "f08166933cf93f146077010ca6c980aaae6149a6e168dd8475b78c2bbc7bdea2",
+      "bytes": 45392
+    }
+  },
+  "publicationReview": {
+    "date": "2026-10-23",
+    "readmeScreenshots": true,
+    "diagnosticTool": "npm run preview:diagnostic -- <demo>",
+    "sourceChange": "Shortened Cook Along instructions to avoid English word/number splitting in the inspected layout.",
+    "repository": "https://github.com/BreezeLife/rokid-aiui-starter-kit",
+    "publicationStatus": "prepared",
+    "ci": {
+      "status": "NOT_ENABLED",
+      "reason": "Publishing credential lacks workflow write scope",
+      "template": "docs/ci/verify.yml"
+    }
+  }
+}
