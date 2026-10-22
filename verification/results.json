@@ -154,6 +154,12 @@
         "editedDiagnosticScreenshots": true,
         "provenance": "demos/style-lens/media/provenance.json"
       }
+    },
+    "publication": {
+      "sourceAndMediaCommit": "8c00ef3c7e1495c920116c3f64bf4820f84a3b86",
+      "remoteFilesMatched": 139,
+      "repository": "https://github.com/BreezeLife/rokid-aiui-starter-kit",
+      "verified": true
     }
   }
 }
