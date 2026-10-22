@@ -1,6 +1,6 @@
 {
   "target": "AIUI 0.19.0",
-  "checkedAt": "2026-10-22T18:38:40.872Z",
+  "checkedAt": "2026-10-22T19:07:05.292Z",
   "demos": {
     "cook-along": {
       "structure": "PASS",
@@ -9,9 +9,9 @@
       "unmatchedSymbols": 3,
       "capabilityPolicy": "BLOCKED",
       "package": {
-        "path": "output/packages/cook-along-2026-10-22T18-38-44-341Z.aix",
+        "path": "output/packages/cook-along-2026-10-22T19-07-44-534Z.aix",
         "bytes": 17417,
-        "sha256": "abb32eb83f51aa250952b69af6d2e890539cb772c5e5c05ddda25a97f1b2074e",
+        "sha256": "080e95476d351d70ab1b9664237056bb40cef7e9be2d547e436441d7b525361e",
         "packAndList": "PASS"
       },
       "nativeHtml": {
@@ -32,9 +32,9 @@
       "unmatchedSymbols": 10,
       "capabilityPolicy": "BLOCKED",
       "package": {
-        "path": "output/packages/style-lens-2026-10-22T18-38-44-341Z.aix",
+        "path": "output/packages/style-lens-2026-10-22T19-07-44-534Z.aix",
         "bytes": 17810,
-        "sha256": "3021884c320c0276f9b875007aa1a9bad7850fdbed4ea1c261474ac519e565b2",
+        "sha256": "971f96f1e687561c5b1ae237b0338badf1ac5481901b92abb6de24353634d36e",
         "packAndList": "PASS"
       },
       "nativeHtml": {
@@ -124,5 +124,36 @@
     "sourcePublicationCommit": "1d58262d10f1f05d23b5f0f9ca38eae2c87bdbaf",
     "remoteFilesMatched": 79,
     "isTemplate": true
+  },
+  "hackathonDelivery": {
+    "report": "verification/hackathon-delivery.md",
+    "backendNativeChecks": "verification/deployment-template.json",
+    "appSourceChanged": false,
+    "videos": {
+      "cook-along": {
+        "path": "demos/cook-along/media/demo.mp4",
+        "bytes": 549698,
+        "sha256": "e2c6a82eb86f891d20560a0d37b5a4ab2799e96538c18db552c91fd20fa89522",
+        "durationSeconds": 30,
+        "width": 1280,
+        "height": 720,
+        "fps": 30,
+        "codec": "h264",
+        "editedDiagnosticScreenshots": true,
+        "provenance": "demos/cook-along/media/provenance.json"
+      },
+      "style-lens": {
+        "path": "demos/style-lens/media/demo.mp4",
+        "bytes": 516357,
+        "sha256": "1a867fd729a4e9e7f34bac980736d15e86ec7ea71accc9560b6a68a52e3a723a",
+        "durationSeconds": 30,
+        "width": 1280,
+        "height": 720,
+        "fps": 30,
+        "codec": "h264",
+        "editedDiagnosticScreenshots": true,
+        "provenance": "demos/style-lens/media/provenance.json"
+      }
+    }
   }
 }

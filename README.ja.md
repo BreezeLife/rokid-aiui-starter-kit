@@ -26,15 +26,34 @@ GitHub からリポジトリの ZIP をダウンロードし、展開したフ�
 
 ## デモのスクリーンショット
 
-以下は修正した Ink 0.19.0 ランタイムを使って実際に取得したブラウザー画像です。限定的な診断用 UI の観測であり、AIUI Studio や物理眼鏡のエビデンスではありません。
+以下の画像は、修正した Ink 0.19.0 で実際に取得した診断用ブラウザーのスクリーンショットです。リンク先の動画は実際の画像を編集して構成した実演で、連続したリアルタイム録画ではありません。画像または動画リンクから再生できます。AIUI Studio・物理眼鏡・実モデル接続のエビデンスではありません。
 
-![修正した Ink 0.19.0 のブラウザー診断で動作中の Cook Along タイマー](verification/screenshots/cook-running-final.png)
+[![修正した Ink 0.19.0 のブラウザー診断で動作中の Cook Along タイマー](verification/screenshots/cook-running-final.png)](demos/cook-along/media/demo.mp4)
+
+[約30秒の Cook Along 実演を見る（MP4）](demos/cook-along/media/demo.mp4)
 
 Cook Along：レシピの手順と動作中のタイマー。
 
-![修正した Ink 0.19.0 のブラウザー診断で表示した Style Lens の Sample 画面](verification/screenshots/style-sample-final.png)
+[![修正した Ink 0.19.0 のブラウザー診断で表示した Style Lens の Sample 画面](verification/screenshots/style-sample-final.png)](demos/style-lens/media/demo.mp4)
+
+[約30秒の Style Lens 実演を見る（MP4）](demos/style-lens/media/demo.mp4)
 
 Style Lens：Sample と明示された例示の提案と場面の選択。実モデルの結果は表示していません。
+
+## 最短手順：インポート → 実行 → 変更
+
+クローン後に [DevKit を一度インストールして読み込み](#1-devkit-をインストールして読み込む)、次の順に進めます。
+
+1. **インポート：**上の正確なパスを使い、選んだ `demos/<name>/app` を AIUI Studio にインポートします。
+2. **実行：**Cook Along でレシピを選ぶか、Style Lens を Sample で開きます。どちらの初期フローも API キーは不要です。
+3. **変更：**DevKit とデモの3つの依頼例を使って下の1か所を変更し、Starter Kit のルートで[依存関係のインストールとローカル検証](#3-ローカル検証を実行する)を行います。開き直すか再インポートして変化を確認します。
+
+| デモ | 1 · データ | 2 · UI | 3 · プロンプトまたは API 設定 |
+| --- | --- | --- | --- |
+| Cook Along | [recipes.js](demos/cook-along/app/lib/recipes.js) | [index.ink](demos/cook-along/app/pages/index.ink) | [Agent のプロンプト](demos/cook-along/app/AGENTS.md) |
+| Style Lens | [samples.js](demos/style-lens/app/data/samples.js) | [index.ink](demos/style-lens/app/pages/index/index.ink) | [API 設定](demos/style-lens/app/config.js) |
+
+[Cook Along ガイド](demos/cook-along/README.ja.md#最短手順インポート--実行--変更)と [Style Lens ガイド](demos/style-lens/README.ja.md#最短手順インポート--実行--変更)に、最短の導入・実行・変更手順とコピーできる3つの Vibe Coding 依頼例があります。Style Lens はキー不要の Sample と別途設定できるバックエンドを用意しています。[バックエンド配置ガイド（英語）](demos/style-lens/server/README.md)にローカル Node.js、Docker/Compose、HTTPS コンテナーサービス向けの手順があります。配置と実モデル接続の検証は別途必要です。
 
 ## 1. DevKit をインストールして読み込む
 

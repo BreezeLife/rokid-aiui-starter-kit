@@ -1,0 +1,52 @@
+[
+  {
+    "demo": "cook-along",
+    "name": "01-selector",
+    "capturedAt": "2026-10-22T19:04:17.504Z"
+  },
+  {
+    "demo": "cook-along",
+    "name": "02-prepare",
+    "capturedAt": "2026-10-22T19:04:23.785Z"
+  },
+  {
+    "demo": "cook-along",
+    "name": "03-bloom-ready",
+    "capturedAt": "2026-10-22T19:04:29.797Z"
+  },
+  {
+    "demo": "cook-along",
+    "name": "04-timer-running",
+    "capturedAt": "2026-10-22T19:04:35.857Z"
+  },
+  {
+    "demo": "cook-along",
+    "name": "05-timer-elapsed",
+    "capturedAt": "2026-10-22T19:04:44.242Z"
+  },
+  {
+    "demo": "cook-along",
+    "name": "06-timer-paused",
+    "capturedAt": "2026-10-22T19:04:44.717Z"
+  },
+  {
+    "demo": "cook-along",
+    "name": "07-timer-resumed",
+    "capturedAt": "2026-10-22T19:04:52.572Z"
+  },
+  {
+    "demo": "cook-along",
+    "name": "08-pour",
+    "capturedAt": "2026-10-22T19:04:52.903Z"
+  },
+  {
+    "demo": "cook-along",
+    "name": "09-serve",
+    "capturedAt": "2026-10-22T19:04:59.676Z"
+  },
+  {
+    "demo": "cook-along",
+    "name": "10-complete",
+    "capturedAt": "2026-10-22T19:05:07.397Z"
+  }
+]

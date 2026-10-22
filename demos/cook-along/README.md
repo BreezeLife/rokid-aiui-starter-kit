@@ -4,7 +4,9 @@ English | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) · [Starte
 
 A local recipe stepper and timer for Rokid Glasses. Use it as a starting point for coffee, tea, craft instructions, or another short guided routine.
 
-![Cook Along diagnostic browser screenshot — patched Ink 0.19.0](../../verification/screenshots/cook-running-final.png)
+[![Cook Along diagnostic browser screenshot — patched Ink 0.19.0](../../verification/screenshots/cook-running-final.png)](media/demo.mp4)
+
+[Watch the ~30-second diagnostic walkthrough (MP4)](media/demo.mp4). This edited walkthrough uses actual diagnostic browser screenshots from patched Ink 0.19.0; it is not a continuous real-time recording or evidence of Studio, glasses, or live-provider operation.
 
 Actual Cook Along browser capture using patched Ink 0.19.0. This is diagnostic UI evidence, not AIUI Studio or physical-glasses validation.
 
@@ -19,18 +21,19 @@ Actual Cook Along browser capture using patched Ink 0.19.0. This is diagnostic U
 
 “Offline” means the core recipe/timer flow after the Page has opened. Host launch, cloud voice services, and installation are outside that claim and need separate device verification. This demo does not use an AI model at runtime.
 
-## Start
+## Quickstart: import → run → modify
 
-1. Follow the [root installation guide](../../README.md) to install **and load** your DevKit in Codex, Claude Code, or Cursor.
-2. Open the Starter Kit root in the coding tool. Read this demo, then choose one of the prompts below.
-3. Run checks from the **Starter Kit root**:
+First clone the Starter Kit and [install and load the DevKit](../../README.md#1-install-and-load-your-devkit) in your coding tool.
+
+1. **Import:** select `demos/cook-along/app` in AIUI Studio, or use the GitHub coordinates below. This is the directory containing `app.json`.
+2. **Run:** open `pages/index` in `_blank`, choose **Pour-over coffee**, then **Next step** → **Start timer**. No API key is needed.
+3. **Modify:** ask the DevKit to change the first recipe instruction in `app/lib/recipes.js`, using prompt 1 below. Run the checks from the **Starter Kit root**, then reopen/reimport the edited app and observe the changed text:
 
    ```bash
+   npm ci --ignore-scripts --no-audit --no-fund
    npm test
    npm run verify
    ```
-
-4. In AIUI Studio, select `demos/cook-along/app`, which directly contains `app.json`. Do not import the demo's parent folder. Test the sequence below in Studio and then on glasses.
 
 For GitHub import, use these exact coordinates. Choose a specific commit instead of `main` when reproducing a recorded source snapshot.
 
@@ -48,19 +51,17 @@ Coffee has a 30-second bloom and 90-second drawdown preset. Pasta has a 120-seco
 
 Timing uses an absolute deadline. When the Page is hidden, refresh work stops; showing it again recalculates the remaining time. Closing the Page clears the session. There is no system alarm, sound, background service, or saved timer recovery. Buttons use focus/tap; hardware input behavior still requires glasses verification.
 
-## Change these files first
+## Change these three places first
 
-Paths below are relative to `demos/cook-along/`.
+Paths are relative to `demos/cook-along/`. Start with these **three** entrypoints:
 
-| File | Change here |
-| --- | --- |
-| `app/lib/recipes.js` | Recipe IDs, labels, step instructions, and timer durations |
-| `app/pages/index.ink` | English UI, layout, step flow, timer presentation, focus/tap handlers |
-| `app/app.json` | App metadata and declared Page |
-| `app/AGENTS.md` | How the runtime Agent opens this Page |
-| `tests/` | Regression coverage for any changed behavior |
+| Order | File | First change |
+| --- | --- | --- |
+| **1 · Data** | `app/lib/recipes.js` | Change a recipe title, instruction, or `timerSeconds` |
+| **2 · UI** | `app/pages/index.ink` | Change the visible headings, button text, or step layout |
+| **3 · Agent prompt** | `app/AGENTS.md` | Change the runtime Agent's introduction and Page-opening guidance; no model API is needed |
 
-When adding recipe IDs, update the Page schema enum in `app/pages/index.ink` and runtime instructions in `app/AGENTS.md` too. Keep each recipe readable at a glance. The app must not import files from another demo or outside its own `app/` directory.
+When adding recipe IDs, also update the Page schema enum in `app/pages/index.ink` and the runtime instructions in `app/AGENTS.md`. Keep each step readable at a glance. App metadata lives in `app/app.json`; behavioral regressions belong in `tests/`. The app must not import files from another demo or outside its own `app/` directory.
 
 ## Three copyable coding prompts
 

@@ -1,0 +1,4 @@
+assets/vendor/
+.hyperframes/
+node_modules/
+renders/

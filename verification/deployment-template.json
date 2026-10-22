@@ -1,0 +1,54 @@
+{
+  "recordedAt": "2026-10-22T19:09:17.879991+00:00",
+  "kind": "deployment-template-native-check",
+  "node": "v24.19.0",
+  "dockerAvailable": false,
+  "checks": [
+    {
+      "name": "dockerfile-health-command-json",
+      "status": "PASS",
+      "detail": "Parsed the exact Dockerfile health-check argv; executed it below with native Node."
+    },
+    {
+      "name": "dockerignore-runtime-allowlist",
+      "status": "PASS",
+      "detail": "Only Dockerfile and the three runtime files are allowed into the build context."
+    },
+    {
+      "name": "self-contained-runtime-files",
+      "status": "PASS",
+      "detail": "Launched from an isolated directory containing exactly the Docker COPY source files."
+    },
+    {
+      "name": "native-runtime-env-startup",
+      "status": "PASS",
+      "detail": "Real node server.mjs startup with HOST=0.0.0.0 and runtime environment injection; GET /health returned 200."
+    },
+    {
+      "name": "exact-dockerfile-health-command-native",
+      "status": "PASS",
+      "detail": "The exact Dockerfile health expression exited 0 under native Node. This is not a container execution."
+    },
+    {
+      "name": "unauthorized-api-request",
+      "status": "PASS",
+      "detail": "POST /api/style without Authorization returned 401 before provider handling."
+    },
+    {
+      "name": "provider-free-check-scope",
+      "status": "PASS",
+      "detail": "Only health and an unauthenticated request were sent. Dummy credentials and an unreachable loopback upstream were used; no paid endpoint was configured."
+    },
+    {
+      "name": "no-secret-output",
+      "status": "PASS",
+      "detail": "Captured process stdout/stderr contained neither temporary token nor dummy provider key."
+    }
+  ],
+  "limitations": [
+    "Docker CLI unavailable: image build and Compose startup were not executed.",
+    "No remote HTTPS deployment, device camera, or paid provider request was tested.",
+    "Compose content was inspected; native checks are not container validation."
+  ],
+  "status": "PASS_NATIVE_ONLY_CONTAINER_BLOCKED"
+}

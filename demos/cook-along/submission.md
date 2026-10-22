@@ -64,6 +64,8 @@ See [capture-plan.md](media/capture-plan.md) for the sequence and separate offli
 - Studio import/simulation, retained Page lifecycle on the host, root back behavior, physical touchpad input, optical readability, performance and offline host launch remain BLOCKED pending actual captures.
 - Recompute the fingerprint and rerun relevant checks after any source change. Refresh media when visible behavior changes.
 
+The actual [30-second diagnostic walkthrough](media/demo.mp4) and its [capture/source provenance](media/README.md) are available for starter onboarding. It does not complete the Studio/device media plans above.
+
 ## Owner inputs and decision
 
 | Missing input or gate | Owner | Next action | Result |

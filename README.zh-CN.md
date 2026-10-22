@@ -26,15 +26,34 @@ cd rokid-aiui-starter-kit
 
 ## Demo 截图
 
-以下是使用修补版 Ink 0.19.0 运行时获得的真实浏览器截图，仅用于有限的诊断界面观察，不是 AIUI Studio 或实体眼镜证据。
+以下图片是使用修补版 Ink 0.19.0 获取的真实诊断浏览器截图。链接视频由实际截图剪辑而成，并非连续实时录屏；点击截图或视频链接即可观看。它们不是 AIUI Studio、实体眼镜或真实模型服务证据。
 
-![Cook Along 在修补版 Ink 0.19.0 浏览器诊断中的计时界面](verification/screenshots/cook-running-final.png)
+[![Cook Along 在修补版 Ink 0.19.0 浏览器诊断中的计时界面](verification/screenshots/cook-running-final.png)](demos/cook-along/media/demo.mp4)
+
+[观看约 30 秒 Cook Along 演示（MP4）](demos/cook-along/media/demo.mp4)
 
 Cook Along：菜谱步骤与运行中的计时器。
 
-![Style Lens 在修补版 Ink 0.19.0 浏览器诊断中的 Sample 界面](verification/screenshots/style-sample-final.png)
+[![Style Lens 在修补版 Ink 0.19.0 浏览器诊断中的 Sample 界面](verification/screenshots/style-sample-final.png)](demos/style-lens/media/demo.mp4)
+
+[观看约 30 秒 Style Lens 演示（MP4）](demos/style-lens/media/demo.mp4)
 
 Style Lens：明确标注 Sample 的示例建议与场合选项，图中没有真实模型结果。
+
+## 最短路径：导入 → 运行 → 修改
+
+克隆后先[安装并加载一次 DevKit](#1-安装并加载-devkit)，然后：
+
+1. **导入：**按上方准确路径，将选中的 `demos/<name>/app` 目录导入 AIUI Studio。
+2. **运行：**在 Cook Along 中选择菜谱，或打开 Style Lens 的 Sample 模式。这两个起始流程都不需要 API Key。
+3. **修改：**使用 DevKit 和 Demo 提供的三条可复制提示词，修改下方一个入口；从 Starter Kit 根目录运行[依赖安装和本地检查命令](#3-运行本地检查)，再重新打开或导入，观察变化。
+
+| Demo | 1 · 数据 | 2 · 界面 | 3 · 提示词或 API 配置 |
+| --- | --- | --- | --- |
+| Cook Along | [recipes.js](demos/cook-along/app/lib/recipes.js) | [index.ink](demos/cook-along/app/pages/index.ink) | [Agent 提示词](demos/cook-along/app/AGENTS.md) |
+| Style Lens | [samples.js](demos/style-lens/app/data/samples.js) | [index.ink](demos/style-lens/app/pages/index/index.ink) | [API 配置](demos/style-lens/app/config.js) |
+
+[Cook Along 指南](demos/cook-along/README.zh-CN.md#最短路径导入--运行--修改)和 [Style Lens 指南](demos/style-lens/README.zh-CN.md#最短路径导入--运行--修改)各自提供最短的导入/运行/修改路径和三条可直接复制的 Vibe Coding 提示词。Style Lens 提供无 Key 的 Sample 路径和独立可配置后端。[后端部署指南（英文）](demos/style-lens/server/README.md)提供本地 Node.js、Docker/Compose 和 HTTPS 容器服务的配置步骤；部署和真实模型服务仍需另行验证。
 
 ## 1. 安装并加载 DevKit
 

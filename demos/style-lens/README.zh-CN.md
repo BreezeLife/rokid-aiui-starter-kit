@@ -4,7 +4,9 @@
 
 Rokid Glasses 上的衣物搭配建议起点。选择工作、周末或晚间场合，阅读三条简短建议。先用内置 Sample 体验流程，再连接自己的视觉模型服务，验证真实拍照流程。
 
-![Style Lens 诊断浏览器截图，使用修补版 Ink 0.19.0](../../verification/screenshots/style-sample-final.png)
+[![Style Lens 诊断浏览器截图，使用修补版 Ink 0.19.0](../../verification/screenshots/style-sample-final.png)](media/demo.mp4)
+
+[观看约 30 秒诊断演示（MP4）](media/demo.mp4)。视频由修补版 Ink 0.19.0 的实际诊断浏览器截图剪辑而成，并非连续实时录屏，不代表 Studio、眼镜或真实模型服务验证。
 
 使用修补版 Ink 0.19.0 获得的 Style Lens 真实浏览器截图，仅为界面诊断证据，不代表 AIUI Studio 或实体眼镜验证。 Style Lens 处于 Sample 模式，未展示真实模型结果。
 
@@ -18,18 +20,19 @@ Rokid Glasses 上的衣物搭配建议起点。选择工作、周末或晚间场
 | 后端 | `demos/style-lens/server`；单独部署，不导入 Studio |
 | 开发工具 | 外部 `rokid-aiui-agent` DevKit Skill |
 
-## 先使用 Sample 模式
+## 最短路径：导入 → 运行 → 修改
 
-1. 按[根目录指南](../../README.zh-CN.md)，在编码工具中安装并**加载** DevKit。
-2. 打开 Starter Kit 根目录。修改和体验 Sample 模式不需要模型服务账号或 Key。
-3. 从 **Starter Kit 根目录**运行：
+先克隆 Starter Kit，并在编码工具中[安装和加载 DevKit](../../README.zh-CN.md#1-安装并加载-devkit)。
+
+1. **导入：**在 AIUI Studio 选择 `demos/style-lens/app`，或使用下方 GitHub 坐标。不要导入 `server/`。
+2. **运行：**以 `_blank` 打开 `pages/index/index`，保持 **Sample**，尝试 **Work**、**Weekend**、**Evening**。Sample 不需要相机、后端或 API Key。
+3. **修改：**用下方提示词 1，让 DevKit 修改 `app/data/samples.js` 中的一条内置建议。从 **Starter Kit 根目录**运行检查，再重新打开或导入修改后的 App，查看 Sample 文字变化：
 
    ```bash
+   npm ci --ignore-scripts --no-audit --no-fund
    npm test
    npm run verify
    ```
-
-4. 将直接包含 `app.json` 的 `demos/style-lens/app` 导入 AIUI Studio。打开 Page，保持 **Sample** 模式，尝试三个场合。
 
 从 GitHub 导入时使用以下准确坐标。复现已记录的源码快照时，应将 `main` 替换为对应 commit。
 
@@ -42,6 +45,8 @@ Directory: demos/style-lens/app
 每次打开 Page 都从 Sample 模式开始。可选的 `occasion` 参数接受 `work`、`weekend`、`evening`，默认 `work`；它不会启用 Live。拍照始终由用户明确操作触发。
 
 ## 连接 Live 模式
+
+完整的本地 Node.js、Docker/Compose 和托管 HTTPS 容器配置步骤见[后端部署指南（英文）](server/README.md)。模板供团队自行部署；这里尚未验证容器运行、远程 HTTPS 或真实模型服务。
 
 代理通过 `POST /api/style` 接收图片和场合，再调用可配置的 OpenAI 兼容视觉 API。选择团队可以使用、支持图片输入的服务商和模型；本工程不预置或开通某个模型服务。
 
@@ -78,20 +83,17 @@ teamToken: 'your-temporary-per-team-token'
 
 配置后再选择 **Try Live** 和 **Capture & send**，并按提示授予相机权限。Live 会通过代理将照片发送给所配置的服务商；Sample 不会。App 和代理不保存照片，所选服务商的保留政策在此未确认。取消不能撤回已发送的照片或已产生的模型费用。初始限制为每张图片 4 MiB、App 请求 45 秒超时、模型请求 25 秒超时。取消、拒绝权限、配置缺失、网络/服务错误和无效响应都应进入明确、可恢复的状态。可以切回不需要 Key 的 Sample，但不能把示例结果说成真实请求成功。
 
-## 优先修改这些文件
+## 先改这三个地方
 
-下列路径相对于 `demos/style-lens/`。
+路径相对于 `demos/style-lens/`。先从这**三个**入口开始：
 
-| 文件 | 修改内容 |
-| --- | --- |
-| `app/data/samples.js` | 工作、周末、晚间的示例建议 |
-| `app/config.js` | 后端地址、临时团队令牌、请求超时与图片限制 |
-| `app/pages/index/index.ink` | 英文界面、场合/模式选择、拍照/请求流程及恢复 |
-| `server/prompt.mjs` | 真实模型的系统提示词 |
-| `server/server.mjs` | 模型请求、响应格式、身份验证与限制 |
-| `server/.env.example` | 服务端配置模板；真实值只放入本地 `.env` |
-| `app/AGENTS.md`、`app/app.json` | 运行时调用、Page 元信息和权限声明 |
-| `tests/` | 使用桩而非付费模型的 App/代理回归测试 |
+| 顺序 | 文件 | 第一次可以修改什么 |
+| --- | --- | --- |
+| **1 · 数据** | `app/data/samples.js` | Work、Weekend 或 Evening 的内置建议 |
+| **2 · 界面** | `app/pages/index/index.ink` | 标题、按钮文案或场合/建议布局 |
+| **3 · API 配置** | `app/config.js` | 在私有副本中填写 HTTPS 后端地址和临时团队令牌；Sample 模式保持两项为空 |
+
+需要修改真实模型行为时，编辑 `server/prompt.mjs` 中的系统提示词。服务端凭据/设置使用 `server/.env.example` → 私有 `.env`，请求和身份验证逻辑位于 `server/server.mjs`。运行时调用与权限位于 `app/AGENTS.md` 和 `app/app.json`，回归测试位于 `tests/`。模型 Key 始终留在服务端。
 
 ## 三条可复制提示词
 

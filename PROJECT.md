@@ -7,7 +7,7 @@ Give hackathon participants complete, editable AIUI 0.19.0 projects and a clear 
 - `demos/cook-along/app/`: standalone Studio import root for an offline recipe stepper and timer.
 - `demos/style-lens/app/`: standalone Studio import root for sample advice and live garment-photo advice.
 - `demos/style-lens/server/`: separately deployed vision API proxy; provider keys never belong in the AIUI app.
-- Each demo owns its tests, README, submission preparation, and verification artifacts outside `app/`.
+- Each demo owns its tests, README, submission preparation, verification artifacts, and `media/` walkthrough/source captures outside `app/`.
 - Root README files in English, Simplified Chinese, and Japanese provide equivalent onboarding.
 - The external `BreezeLife/rokid-aiui-agent-skill` is a development tool, not a runtime dependency. Do not duplicate its Skill package here.
 

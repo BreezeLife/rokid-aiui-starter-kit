@@ -4,7 +4,9 @@ English | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) · [Starte
 
 A garment-advice starter for Rokid Glasses. Select work, weekend, or evening and read three short suggestions. Start with bundled Sample results; connect your own vision provider when you are ready to test the live photo flow.
 
-![Style Lens diagnostic browser screenshot — patched Ink 0.19.0](../../verification/screenshots/style-sample-final.png)
+[![Style Lens diagnostic browser screenshot — patched Ink 0.19.0](../../verification/screenshots/style-sample-final.png)](media/demo.mp4)
+
+[Watch the ~30-second diagnostic walkthrough (MP4)](media/demo.mp4). This edited walkthrough uses actual diagnostic browser screenshots from patched Ink 0.19.0; it is not a continuous real-time recording or evidence of Studio, glasses, or live-provider operation.
 
 Actual Style Lens browser capture using patched Ink 0.19.0. This is diagnostic UI evidence, not AIUI Studio or physical-glasses validation. Style Lens is in Sample mode; no live model result is shown.
 
@@ -18,18 +20,19 @@ Actual Style Lens browser capture using patched Ink 0.19.0. This is diagnostic U
 | Backend | `demos/style-lens/server`; deploy separately, never import it into Studio |
 | Development tool | External `rokid-aiui-agent` DevKit Skill |
 
-## Start with Sample mode
+## Quickstart: import → run → modify
 
-1. Follow the [root guide](../../README.md) to install **and load** the DevKit in your coding tool.
-2. Open the Starter Kit root. No provider account or key is needed to edit and exercise Sample mode.
-3. From the **Starter Kit root**, run:
+First clone the Starter Kit and [install and load the DevKit](../../README.md#1-install-and-load-your-devkit) in your coding tool.
+
+1. **Import:** select `demos/style-lens/app` in AIUI Studio, or use the GitHub coordinates below. Do not import `server/`.
+2. **Run:** open `pages/index/index` in `_blank`. Keep **Sample** selected and try **Work**, **Weekend**, and **Evening**. No camera, backend, or API key is needed for Sample.
+3. **Modify:** ask the DevKit to change a bundled tip in `app/data/samples.js`, using prompt 1 below. Run the checks from the **Starter Kit root**, then reopen/reimport the edited app and observe the changed Sample text:
 
    ```bash
+   npm ci --ignore-scripts --no-audit --no-fund
    npm test
    npm run verify
    ```
-
-4. Import `demos/style-lens/app` into AIUI Studio. It directly contains `app.json`. Open the Page, keep **Sample** selected, and try the three occasions.
 
 For GitHub import, use these exact coordinates. Choose a specific commit instead of `main` when reproducing a recorded source snapshot.
 
@@ -42,6 +45,8 @@ Directory: demos/style-lens/app
 The Page starts in Sample mode every time. An optional `occasion` input accepts `work`, `weekend`, or `evening` and defaults to `work`; it does not enable Live mode. Camera capture is an explicit user action.
 
 ## Connect Live mode
+
+See the [backend deployment guide](server/README.md) for complete local Node.js, Docker/Compose, and managed HTTPS container instructions. The templates are provided for your deployment; container, remote HTTPS, and live-provider operation have not been verified here.
 
 The proxy accepts an image and occasion at `POST /api/style`, then calls a configurable OpenAI-compatible vision API. Pick a provider/model available to your team and able to accept image inputs; no particular model is bundled or provisioned.
 
@@ -78,20 +83,17 @@ The hostname and token above are placeholders. Keep `VISION_API_KEY` out of all 
 
 Configure the backend before choosing **Try Live** and **Capture & send**. Grant camera permission when prompted. Live mode sends the photo through your proxy to the configured provider; Sample mode does not. The App and proxy do not save photos; retention at your chosen provider is not established here. Cancellation cannot undo a photo already transmitted or an incurred provider charge. Initial limits are 4 MiB per image, a 45-second App timeout, and a 25-second provider timeout. Cancel, permission denial, missing configuration, network/provider errors, and invalid responses should lead to an explicit recoverable state. Switching to Sample provides a key-free fallback; it does not pretend the live request succeeded.
 
-## Change these files first
+## Change these three places first
 
-Paths below are relative to `demos/style-lens/`.
+Paths are relative to `demos/style-lens/`. Start with these **three** entrypoints:
 
-| File | Change here |
-| --- | --- |
-| `app/data/samples.js` | Sample advice for work, weekend, and evening |
-| `app/config.js` | Backend endpoint, temporary team token, request timeout and image limit |
-| `app/pages/index/index.ink` | English UI, occasion/mode selection, camera/request flow, recovery |
-| `server/prompt.mjs` | Live-model system prompt |
-| `server/server.mjs` | Provider request, response contract, authentication and limits |
-| `server/.env.example` | Documented server configuration template; put real values only in local `.env` |
-| `app/AGENTS.md`, `app/app.json` | Runtime invocation, Page metadata and declared permissions |
-| `tests/` | App/proxy regression coverage using stubs, not a paid model |
+| Order | File | First change |
+| --- | --- | --- |
+| **1 · Data** | `app/data/samples.js` | Change the bundled Work, Weekend, or Evening tips |
+| **2 · UI** | `app/pages/index/index.ink` | Change headings, button labels, or the occasion/advice layout |
+| **3 · API configuration** | `app/config.js` | In a private copy, set the HTTPS backend URL and temporary team token; leave both blank for Sample |
+
+For Live-model behavior, edit the system prompt in `server/prompt.mjs`. Server credentials/settings use `server/.env.example` → private `.env`; request/authentication logic is in `server/server.mjs`. Runtime invocation and permissions are in `app/AGENTS.md` and `app/app.json`; regression tests are in `tests/`. Keep provider keys on the server.
 
 ## Three copyable coding prompts
 

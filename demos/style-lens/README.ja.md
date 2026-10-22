@@ -4,7 +4,9 @@
 
 Rokid Glasses 向けの服装提案スターターです。仕事・週末・夜の場面を選んで、短い提案を3つ表示します。まず内蔵の Sample で流れを試し、準備ができたら自分の画像モデルに接続して撮影からの動作を検証します。
 
-![Style Lens の診断用ブラウザー画像：修正した Ink 0.19.0](../../verification/screenshots/style-sample-final.png)
+[![Style Lens の診断用ブラウザー画像：修正した Ink 0.19.0](../../verification/screenshots/style-sample-final.png)](media/demo.mp4)
+
+[約30秒の診断用実演を見る（MP4）](media/demo.mp4)。修正した Ink 0.19.0 の実際の診断用ブラウザー画像を編集した動画です。連続したリアルタイム録画ではなく、Studio・眼鏡・実モデル接続のエビデンスでもありません。
 
 修正した Ink 0.19.0 で実際に取得した Style Lens のブラウザー画像です。UI の診断用であり、AIUI Studio・物理眼鏡の検証ではありません。 Style Lens は Sample モードで、実モデルの結果は表示していません。
 
@@ -18,18 +20,19 @@ Rokid Glasses 向けの服装提案スターターです。仕事・週末・夜
 | バックエンド | `demos/style-lens/server`。別途配置し、Studio にはインポートしない |
 | 開発ツール | 外部の `rokid-aiui-agent` DevKit Skill |
 
-## Sample から始める
+## 最短手順：インポート → 実行 → 変更
 
-1. [ルートの手順](../../README.ja.md)に従い、コーディングツールに DevKit をインストールして**読み込み**ます。
-2. Starter Kit のルートを開きます。Sample の編集と動作確認にはモデルのアカウントやキーは不要です。
-3. **Starter Kit のルート**で実行します。
+先に Starter Kit をクローンし、コーディングツールに [DevKit をインストールして読み込み](../../README.ja.md#1-devkit-をインストールして読み込む)ます。
+
+1. **インポート：**AIUI Studio で `demos/style-lens/app` を選びます。下の GitHub 座標も使えます。`server/` はインポートしません。
+2. **実行：**`pages/index/index` を `_blank` で開きます。**Sample** のまま **Work**、**Weekend**、**Evening** を試します。Sample にはカメラ・バックエンド・API キーは不要です。
+3. **変更：**下の依頼例 1 を使い、DevKit に `app/data/samples.js` の内蔵提案を1つ変更させます。**Starter Kit のルート**で検証し、編集した App を開き直すか再インポートして Sample の文章の変化を確認します。
 
    ```bash
+   npm ci --ignore-scripts --no-audit --no-fund
    npm test
    npm run verify
    ```
-
-4. `app.json` を直接含む `demos/style-lens/app` を AIUI Studio にインポートします。Page を開き、**Sample** のまま3つの場面を試します。
 
 GitHub からは次の正確な座標でインポートします。記録済みのソースを再現する場合、`main` の代わりに対応する commit を指定してください。
 
@@ -42,6 +45,8 @@ Directory: demos/style-lens/app
 Page は毎回 Sample で開始します。任意の `occasion` 入力には `work`、`weekend`、`evening` を指定でき、初期値は `work` です。この入力で Live には切り替わりません。撮影は利用者の明示的な操作で行います。
 
 ## Live に接続する
+
+ローカル Node.js、Docker/Compose、マネージド HTTPS コンテナーの詳細は[バックエンド配置ガイド（英語）](server/README.md)を参照してください。テンプレートを使ってチームで配置します。コンテナー実行、外部 HTTPS、実モデル接続はここでは未検証です。
 
 プロキシは `POST /api/style` で画像と場面を受け取り、設定した OpenAI 互換の画像 API を呼び出します。チームが利用でき、画像入力に対応するサービスとモデルを選んでください。特定のモデルやサービスの契約は付属しません。
 
@@ -78,20 +83,17 @@ teamToken: 'your-temporary-per-team-token'
 
 設定後に **Try Live**、**Capture & send** を選び、求められた場合はカメラ権限を許可します。Live はプロキシ経由で写真を設定先のサービスに送り、Sample は送りません。App とプロキシは写真を保存しませんが、サービス側の保存方針はここでは確認していません。取消操作でも、送信済みの写真や発生済みのモデル料金は取り消せません。初期制限は画像あたり4 MiB、App の待機45秒、モデル要求25秒です。取消、権限拒否、設定不足、ネットワーク・サービスエラー、不正な応答は、内容が分かり回復可能な状態で表示する必要があります。キー不要の Sample に戻せますが、実際の要求が成功したようには表示しません。
 
-## 最初に変更するファイル
+## 最初に変更する3か所
 
-以下は `demos/style-lens/` からの相対パスです。
+パスは `demos/style-lens/` からの相対パスです。まず次の**3か所**を変更します。
 
-| ファイル | 変更内容 |
-| --- | --- |
-| `app/data/samples.js` | 仕事・週末・夜の Sample 提案 |
-| `app/config.js` | バックエンド URL、一時チームトークン、タイムアウト、画像制限 |
-| `app/pages/index/index.ink` | 英語 UI、場面・モード選択、撮影・通信、回復処理 |
-| `server/prompt.mjs` | Live モデルのシステムプロンプト |
-| `server/server.mjs` | モデル要求、応答形式、認証、制限 |
-| `server/.env.example` | 設定テンプレート。実際の値はローカル `.env` だけに保存 |
-| `app/AGENTS.md`、`app/app.json` | 実行時の呼び出し、Page 情報、権限宣言 |
-| `tests/` | 有料モデルではなくスタブを使う App・プロキシの回帰テスト |
+| 順序 | ファイル | 最初の変更 |
+| --- | --- | --- |
+| **1 · データ** | `app/data/samples.js` | Work・Weekend・Evening の内蔵提案 |
+| **2 · UI** | `app/pages/index/index.ink` | 見出し、ボタン文言、場面・提案のレイアウト |
+| **3 · API 設定** | `app/config.js` | 非公開のコピーで HTTPS バックエンド URL と一時チームトークンを指定。Sample では両方空欄 |
+
+Live モデルの動作は `server/prompt.mjs` のシステムプロンプトで変更します。サーバー認証情報・設定は `server/.env.example` から非公開 `.env` に設定し、要求・認証処理は `server/server.mjs` にあります。実行時呼び出し・権限は `app/AGENTS.md` と `app/app.json`、回帰テストは `tests/` にあります。モデルのキーはサーバーだけに置きます。
 
 ## コピーして使える3つの依頼
 

@@ -4,6 +4,8 @@ The editable demos and their AIX packages are prepared. **38/38 local tests, bot
 
 This report describes the recorded source snapshot, not a guarantee for a later modified project. [results.json](results.json) binds fingerprints, packages, preview HTML and screenshots. [source-pins.json](source-pins.json) identifies the DevKit, official AIUI source and CLI. The local timezone is Asia/Shanghai; machine timestamps use UTC.
 
+The additional five-item Hackathon handoff is audited in [hackathon-delivery.md](hackathon-delivery.md), including the two actual 30-second videos and the backend deployment template.
+
 ## Executed checks
 
 | Check | Cook Along | Style Lens |
@@ -26,20 +28,20 @@ Cook Along covers recipe selection, invalid input, both complete recipe flows, t
 
 | Demo | Studio source root | Final package in this local workspace | Bytes |
 | --- | --- | --- | --- |
-| Cook Along | `demos/cook-along/app` | `output/packages/cook-along-2026-10-22T18-38-44-341Z.aix` | 17,417 |
-| Style Lens | `demos/style-lens/app` | `output/packages/style-lens-2026-10-22T18-38-44-341Z.aix` | 17,810 |
+| Cook Along | `demos/cook-along/app` | `output/packages/cook-along-2026-10-22T19-07-44-534Z.aix` | 17,417 |
+| Style Lens | `demos/style-lens/app` | `output/packages/style-lens-2026-10-22T19-07-44-534Z.aix` | 17,810 |
 
 Cook Along source fingerprint:
 `WORKTREE:5387d8ed2b6e372f04512267f1569bdf8f971d948738f9878129a78018af3e0e`
 
 Cook Along archive SHA-256:
-`abb32eb83f51aa250952b69af6d2e890539cb772c5e5c05ddda25a97f1b2074e`
+`080e95476d351d70ab1b9664237056bb40cef7e9be2d547e436441d7b525361e`
 
 Style Lens source fingerprint:
 `WORKTREE:c29724b24c4f70213f50ec0ffbb29141941b27a9a94a7b967b99ade067e6a218`
 
 Style Lens archive SHA-256:
-`3021884c320c0276f9b875007aa1a9bad7850fdbed4ea1c261474ac519e565b2`
+`971f96f1e687561c5b1ae237b0338badf1ac5481901b92abb6de24353634d36e`
 
 The DevKit delivery guard checked the exact source before/after packaging and published each archive without overwriting an existing file. Listing showed only app source and generated AIX metadata; the Style Lens server and provider credentials are outside its package. The delivered Style Lens app has empty backend URL and team token and starts in Sample mode. Older timestamped packages in this workspace are superseded by the two above.
 

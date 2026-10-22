@@ -1,6 +1,6 @@
 # Style Lens capture plan
 
-No footage or screenshot in this plan is claimed to exist. Capture after resolving the native preview/Studio environment and recording the exact source fingerprint, runtime, glasses firmware, surface, local timestamp and evidence layer. Keep original files and redacted derivatives separate.
+A [30-second diagnostic screenshot walkthrough](demo.mp4) is now available; [media notes](README.md) describe its source and limits. It uses patched Ink 0.19 in a browser and is not Studio/device footage. The original Studio/device listing captures described below remain pending. Capture owner: hackathon organizer/device tester. Record the exact source fingerprint, runtime, glasses firmware, surface, timestamp and evidence layer when those captures are made.
 
 1. **Sample Work image:** Import `../app` into Studio, open `pages/index/index` in `_blank`, keep configuration blank, record the SAMPLE and “Example: blue shirt” labels and all three tips. Confirm no camera prompt or network request occurs.
 2. **Sample Evening image:** Focus the Evening button with the host's actual input and activate it. Record visible selected-occasion text and changed tips; retain evidence of focused/unfocused behavior.

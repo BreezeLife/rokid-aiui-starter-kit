@@ -26,15 +26,34 @@ The initial app UI is **English**. These developer instructions are available in
 
 ## Demo screenshots
 
-These are actual browser captures using a patched Ink 0.19.0 runtime. They show limited diagnostic UI observations, not AIUI Studio or physical-glasses evidence.
+The screenshots are actual diagnostic browser captures using patched Ink 0.19.0. Each linked video is an edited walkthrough assembled from actual screenshots, not a continuous real-time recording. Click a screenshot or video link to watch. These are not AIUI Studio, physical-glasses, or live-provider evidence.
 
-![Cook Along running timer in the patched Ink 0.19.0 browser diagnostic](verification/screenshots/cook-running-final.png)
+[![Cook Along running timer in the patched Ink 0.19.0 browser diagnostic](verification/screenshots/cook-running-final.png)](demos/cook-along/media/demo.mp4)
+
+[Watch the ~30-second Cook Along walkthrough (MP4)](demos/cook-along/media/demo.mp4)
 
 Cook Along: recipe steps and a running timer.
 
-![Style Lens Sample mode in the patched Ink 0.19.0 browser diagnostic](verification/screenshots/style-sample-final.png)
+[![Style Lens Sample mode in the patched Ink 0.19.0 browser diagnostic](verification/screenshots/style-sample-final.png)](demos/style-lens/media/demo.mp4)
+
+[Watch the ~30-second Style Lens walkthrough (MP4)](demos/style-lens/media/demo.mp4)
 
 Style Lens: clearly labeled Sample advice with occasion controls; no live model result is shown.
+
+## Fast path: import → run → modify
+
+After cloning, [install and load the DevKit once](#1-install-and-load-your-devkit), then:
+
+1. **Import** the chosen `demos/<name>/app` directory into AIUI Studio using the exact paths above.
+2. **Run** Cook Along and choose a recipe, or open Style Lens in Sample mode. These starting flows need no API key.
+3. **Modify** one entrypoint below with the DevKit and a demo's three copyable prompts, run the [local install and check commands](#3-run-local-checks) from the Starter Kit root, then reopen/reimport and observe the change.
+
+| Demo | 1 · Data | 2 · UI | 3 · Prompt or API configuration |
+| --- | --- | --- | --- |
+| Cook Along | [recipes.js](demos/cook-along/app/lib/recipes.js) | [index.ink](demos/cook-along/app/pages/index.ink) | [Agent prompt](demos/cook-along/app/AGENTS.md) |
+| Style Lens | [samples.js](demos/style-lens/app/data/samples.js) | [index.ink](demos/style-lens/app/pages/index/index.ink) | [API config](demos/style-lens/app/config.js) |
+
+The [Cook Along guide](demos/cook-along/README.md#quickstart-import--run--modify) and [Style Lens guide](demos/style-lens/README.md#quickstart-import--run--modify) each give the shortest import/run/modify path and three ready-to-copy Vibe Coding prompts. Style Lens includes a key-free Sample path and a separate configurable backend. Follow the [backend deployment guide](demos/style-lens/server/README.md) for local Node.js, Docker/Compose, or an HTTPS container service; deployment and live-provider checks still need to be performed.
 
 ## 1. Install and load your DevKit
 

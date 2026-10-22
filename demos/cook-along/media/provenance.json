@@ -1,0 +1,250 @@
+{
+  "schemaVersion": 1,
+  "kind": "edited diagnostic browser screenshots",
+  "continuousScreenRecording": false,
+  "studioOrDeviceEvidence": false,
+  "runtime": {
+    "aiuiTarget": "0.19.0",
+    "patchedInk": true,
+    "details": "../../../verification/README.md#browser-observations-and-limitation"
+  },
+  "source": {
+    "verification": "../../../verification/results.json",
+    "fingerprint": "WORKTREE:5387d8ed2b6e372f04512267f1569bdf8f971d948738f9878129a78018af3e0e",
+    "diagnosticHtml": {
+      "path": "output/previews/cook-along-diagnostic.html",
+      "sha256": "c981d01787e802c661b43f911c1b652554bf3ca1d5fdb911f41ce84af0955e50",
+      "embeddedFilesMatchFinalApp": true
+    }
+  },
+  "captures": [
+    {
+      "demo": "cook-along",
+      "name": "01-selector",
+      "capturedAt": "2026-10-22T19:04:17.504Z",
+      "path": "video-source/assets/captures/01-selector.png",
+      "sha256": "cc16878c2405ba4fe458f84b7e2f8d3b7b4578ac5be7f654b59784dbe55f9945",
+      "bytes": 53276,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "cook-along",
+      "name": "02-prepare",
+      "capturedAt": "2026-10-22T19:04:23.785Z",
+      "path": "video-source/assets/captures/02-prepare.png",
+      "sha256": "b7168b01918bf228b63957975f1259d46de78569a5f014d45a436f89a9f07432",
+      "bytes": 47660,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "cook-along",
+      "name": "03-bloom-ready",
+      "capturedAt": "2026-10-22T19:04:29.797Z",
+      "path": "video-source/assets/captures/03-bloom-ready.png",
+      "sha256": "098f73e4af15a3eca9a56e736f90bf7cafca765e6fef70c8e0edb7933100df91",
+      "bytes": 52845,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "cook-along",
+      "name": "04-timer-running",
+      "capturedAt": "2026-10-22T19:04:35.857Z",
+      "path": "video-source/assets/captures/04-timer-running.png",
+      "sha256": "c8efeaa8cac462e21a420c8122a9ee8a4ceaa9b43a42bae15854cd8f4b7f2280",
+      "bytes": 52651,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "cook-along",
+      "name": "05-timer-elapsed",
+      "capturedAt": "2026-10-22T19:04:44.242Z",
+      "path": "video-source/assets/captures/05-timer-elapsed.png",
+      "sha256": "ff11a81c32f20ef0f3e2123748b606642be971ba7aeef960712d32d027c0277d",
+      "bytes": 52670,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "cook-along",
+      "name": "06-timer-paused",
+      "capturedAt": "2026-10-22T19:04:44.717Z",
+      "path": "video-source/assets/captures/06-timer-paused.png",
+      "sha256": "2d63b3167ae698d0f7f4c9777f25a1bc1584c4ccd98389951abd61799c252cc4",
+      "bytes": 52395,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "cook-along",
+      "name": "07-timer-resumed",
+      "capturedAt": "2026-10-22T19:04:52.572Z",
+      "path": "video-source/assets/captures/07-timer-resumed.png",
+      "sha256": "ff11a81c32f20ef0f3e2123748b606642be971ba7aeef960712d32d027c0277d",
+      "bytes": 52670,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "cook-along",
+      "name": "08-pour",
+      "capturedAt": "2026-10-22T19:04:52.903Z",
+      "path": "video-source/assets/captures/08-pour.png",
+      "sha256": "a4667946a38df267417551979da4b0271caca96ec8afd566f2a82f9bd028cb66",
+      "bytes": 53575,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "cook-along",
+      "name": "09-serve",
+      "capturedAt": "2026-10-22T19:04:59.676Z",
+      "path": "video-source/assets/captures/09-serve.png",
+      "sha256": "0bf1a3364138b46c36bef844336964c0a84dd14751a00941779e376cf85878dd",
+      "bytes": 47938,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "cook-along",
+      "name": "10-complete",
+      "capturedAt": "2026-10-22T19:05:07.397Z",
+      "path": "video-source/assets/captures/10-complete.png",
+      "sha256": "f08166933cf93f146077010ca6c980aaae6149a6e168dd8475b78c2bbc7bdea2",
+      "bytes": 45392,
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "edits": {
+    "sourceCrop": {
+      "x": 178,
+      "y": 221,
+      "width": 480,
+      "height": 352
+    },
+    "scale": 1.45,
+    "placement": {
+      "x": 456,
+      "y": 112,
+      "width": 696,
+      "height": 510.4
+    },
+    "method": "Hard cuts and static holds; added English captions and persistent evidence disclosure. UI pixels and timer values are from original captures."
+  },
+  "timeline": "video-source/shots.json",
+  "tooling": {
+    "hyperframes": "0.8.186",
+    "gsap": {
+      "version": "3.14.2",
+      "url": "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "license": "https://gsap.com/standard-license",
+      "vendored": false
+    }
+  },
+  "reproduction": {
+    "cwd": "demos/cook-along/media/video-source",
+    "prepare": "node prepare.mjs",
+    "check": "npx --yes hyperframes@0.8.186 check . --json",
+    "render": "npx --yes hyperframes@0.8.186 render . --output ../demo.mp4 --fps 30 --quality delivery --workers 1"
+  },
+  "limitations": [
+    "Screenshot montage, not real-time interaction or timer playback.",
+    "Patched diagnostic browser; original Studio/device capture remains pending."
+  ],
+  "video": {
+    "path": "demo.mp4",
+    "sha256": "e2c6a82eb86f891d20560a0d37b5a4ab2799e96538c18db552c91fd20fa89522",
+    "bytes": 549698,
+    "durationSeconds": 30,
+    "frames": 900,
+    "width": 1280,
+    "height": 720,
+    "fps": "30/1",
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "audioStreams": 0
+  },
+  "review": {
+    "hyperframesCheck": "PASS: no lint/runtime/layout/contrast errors or warnings",
+    "acceptedCraftWarnings": [
+      "Silent by request",
+      "Disclosure text is repeated identically across 2-second hard cuts, continuously visible for all 30 seconds."
+    ],
+    "decodedSamplesSeconds": [
+      0.3,
+      15,
+      29.9
+    ],
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "30/1",
+          "nb_frames": "900"
+        }
+      ],
+      "format": {
+        "duration": "30.000000",
+        "size": "549698"
+      }
+    },
+    "runtimeEnvironment": {
+      "node": "26.8.2",
+      "browser": "HeadlessChrome/152.0.7977.30",
+      "os": "darwin arm64",
+      "capture": "drawElement with screenshot verification",
+      "gpu": "Apple M1 Pro ANGLE Metal"
+    }
+  },
+  "compositionFiles": {
+    "video-source/compositions/shot-01.html": "66a667e1a4dbbe922ad40488a0d97732cfc295e09faa00d473a0fb9bed26c0e4",
+    "video-source/compositions/shot-02.html": "4cb27a9e47ebf2815b21d21048e4c4b2dfe0b83080b6b5e05f6d8d4c74d4d489",
+    "video-source/compositions/shot-03.html": "254821b9f02031d36e395916dfa5e648b9d2448bf5f90ef57e89c6ab5dbe7c39",
+    "video-source/compositions/shot-04.html": "425f85e5485b6237dd4ee0d7923b1d3d4fae7f200ba83007450b0bab12872093",
+    "video-source/compositions/shot-05.html": "f6dde199c381c3fab9dec9bd2fb62c3cc140d8c9ee008034bdca2090f7edad6f",
+    "video-source/compositions/shot-06.html": "77437d6138e20160009e11f244dfaa89fd864c315644d965e99c87892bbbb23e",
+    "video-source/compositions/shot-07.html": "76ca6665eabdb70e25b51a6ae9ba253db6df7e5d67301186552763e98569e49e",
+    "video-source/compositions/shot-08.html": "a001445cb3c7afbada7b79bd5d03ea93103b9013495ced0d237ae778c99a98cc",
+    "video-source/compositions/shot-09.html": "ebbd4df55408a8667befe41b8fbd749bb078b61562901eef0861ea680e21b8eb",
+    "video-source/compositions/shot-10.html": "3f65da2db5c1bbc07ffaff2dee204a717049da6acb3fecc68ec3f27307d31b65",
+    "video-source/index.html": "14c23f57f4045f6db779e0818c4d386916db7c918e14b2e9592767046933a250",
+    "video-source/prepare.mjs": "441fc78fb2c5f3b956c0cf9ae4cbd2678367d1a270a737300c9ae0bb7dcff825"
+  },
+  "poster": {
+    "path": "poster.png",
+    "source": "demo.mp4",
+    "timeSeconds": 0.3,
+    "sha256": "70206ff3d2372cfcf316cec941a5b5655c8e1c9c07c3fde12b96fab5b65986b3"
+  }
+}

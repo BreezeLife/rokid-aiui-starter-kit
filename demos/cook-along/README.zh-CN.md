@@ -4,7 +4,9 @@
 
 Rokid Glasses 上的本地菜谱步骤与计时 Demo，可改成咖啡、泡茶、手工教学或其他简短操作指南。
 
-![Cook Along 诊断浏览器截图，使用修补版 Ink 0.19.0](../../verification/screenshots/cook-running-final.png)
+[![Cook Along 诊断浏览器截图，使用修补版 Ink 0.19.0](../../verification/screenshots/cook-running-final.png)](media/demo.mp4)
+
+[观看约 30 秒诊断演示（MP4）](media/demo.mp4)。视频由修补版 Ink 0.19.0 的实际诊断浏览器截图剪辑而成，并非连续实时录屏，不代表 Studio、眼镜或真实模型服务验证。
 
 使用修补版 Ink 0.19.0 获得的 Cook Along 真实浏览器截图，仅为界面诊断证据，不代表 AIUI Studio 或实体眼镜验证。
 
@@ -19,18 +21,19 @@ Rokid Glasses 上的本地菜谱步骤与计时 Demo，可改成咖啡、泡茶�
 
 “离线”指 Page 打开后的菜谱与计时核心流程。宿主启动、云端语音和安装不在此声明范围内，需要单独进行真机验证。这个 Demo 在运行时不调用 AI 模型。
 
-## 开始使用
+## 最短路径：导入 → 运行 → 修改
 
-1. 按[根目录安装指南](../../README.zh-CN.md)，在 Codex、Claude Code 或 Cursor 中安装并**加载**你的 DevKit。
-2. 在编码工具中打开 Starter Kit 根目录，读完本 Demo 说明，选择下面一条提示词。
-3. 从 **Starter Kit 根目录**运行检查：
+先克隆 Starter Kit，并在编码工具中[安装和加载 DevKit](../../README.zh-CN.md#1-安装并加载-devkit)。
+
+1. **导入：**在 AIUI Studio 选择直接包含 `app.json` 的 `demos/cook-along/app`，或使用下方 GitHub 坐标。
+2. **运行：**以 `_blank` 打开 `pages/index`，选择 **Pour-over coffee**，再点击 **Next step** → **Start timer**，不需要 API Key。
+3. **修改：**用下方提示词 1，让 DevKit 修改 `app/lib/recipes.js` 中第一条菜谱说明。从 **Starter Kit 根目录**运行检查，再重新打开或导入修改后的 App，查看文字变化：
 
    ```bash
+   npm ci --ignore-scripts --no-audit --no-fund
    npm test
    npm run verify
    ```
-
-4. 在 AIUI Studio 中选择直接包含 `app.json` 的 `demos/cook-along/app`，不要选择 Demo 的父目录。在 Studio 和眼镜上分别执行后文演示步骤。
 
 从 GitHub 导入时使用以下准确坐标。复现已记录的源码快照时，应将 `main` 替换为对应 commit。
 
@@ -48,19 +51,17 @@ Directory: demos/cook-along/app
 
 计时依据绝对结束时间。Page 隐藏时停止界面刷新，重新显示时计算剩余时间；关闭 Page 会清除本次会话。没有系统闹钟、声音、后台服务或持久化计时恢复。按钮支持焦点与点击，硬件输入仍需眼镜验证。
 
-## 优先修改这些文件
+## 先改这三个地方
 
-下列路径相对于 `demos/cook-along/`。
+路径相对于 `demos/cook-along/`。先从这**三个**入口开始：
 
-| 文件 | 修改内容 |
-| --- | --- |
-| `app/lib/recipes.js` | 菜谱 ID、名称、步骤说明和计时时长 |
-| `app/pages/index.ink` | 英文界面、布局、步骤流程、计时显示和焦点/点击处理 |
-| `app/app.json` | App 元信息和 Page 声明 |
-| `app/AGENTS.md` | 运行时 Agent 如何打开本 Page |
-| `tests/` | 修改行为对应的回归测试 |
+| 顺序 | 文件 | 第一次可以修改什么 |
+| --- | --- | --- |
+| **1 · 数据** | `app/lib/recipes.js` | 菜谱标题、步骤说明或 `timerSeconds` |
+| **2 · 界面** | `app/pages/index.ink` | 显示标题、按钮文案或步骤布局 |
+| **3 · Agent 提示词** | `app/AGENTS.md` | 运行时 Agent 的介绍和打开 Page 的指引，不需要模型 API |
 
-新增菜谱 ID 时，还要同步修改 `app/pages/index.ink` 的 Page schema 枚举和 `app/AGENTS.md` 运行时说明。每一步都应能快速读懂。App 不应引用其他 Demo 或自己 `app/` 目录之外的文件。
+新增菜谱 ID 时，还要同步修改 `app/pages/index.ink` 中的 Page schema 枚举和 `app/AGENTS.md` 中的运行时说明。每一步都应能快速读懂。App 元信息位于 `app/app.json`，行为回归测试位于 `tests/`。App 不应引用其他 Demo 或自己 `app/` 目录之外的文件。
 
 ## 三条可复制提示词
 

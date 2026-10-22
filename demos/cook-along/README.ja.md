@@ -4,7 +4,9 @@
 
 Rokid Glasses 向けのローカル手順ガイドとタイマーです。コーヒー、お茶、工作など、短い作業手順を案内する作品の出発点にできます。
 
-![Cook Along の診断用ブラウザー画像：修正した Ink 0.19.0](../../verification/screenshots/cook-running-final.png)
+[![Cook Along の診断用ブラウザー画像：修正した Ink 0.19.0](../../verification/screenshots/cook-running-final.png)](media/demo.mp4)
+
+[約30秒の診断用実演を見る（MP4）](media/demo.mp4)。修正した Ink 0.19.0 の実際の診断用ブラウザー画像を編集した動画です。連続したリアルタイム録画ではなく、Studio・眼鏡・実モデル接続のエビデンスでもありません。
 
 修正した Ink 0.19.0 で実際に取得した Cook Along のブラウザー画像です。UI の診断用であり、AIUI Studio・物理眼鏡の検証ではありません。
 
@@ -19,18 +21,19 @@ Rokid Glasses 向けのローカル手順ガイドとタイマーです。コー
 
 「オフライン」は Page を開いた後のレシピ・タイマー機能を指します。ホスト起動、クラウド音声、インストールは含まず、別途実機確認が必要です。このデモは実行時に AI モデルを呼び出しません。
 
-## 始め方
+## 最短手順：インポート → 実行 → 変更
 
-1. [ルートの導入手順](../../README.ja.md)に従い、Codex、Claude Code、Cursor のいずれかで DevKit をインストールして**読み込み**ます。
-2. コーディングツールで Starter Kit のルートを開き、この説明を読んで下の依頼例を選びます。
-3. **Starter Kit のルート**で検証します。
+先に Starter Kit をクローンし、コーディングツールに [DevKit をインストールして読み込み](../../README.ja.md#1-devkit-をインストールして読み込む)ます。
+
+1. **インポート：**AIUI Studio で `app.json` を直接含む `demos/cook-along/app` を選びます。下の GitHub 座標も使えます。
+2. **実行：**`pages/index` を `_blank` で開き、**Pour-over coffee** → **Next step** → **Start timer** を選びます。API キーは不要です。
+3. **変更：**下の依頼例 1 を使い、DevKit に `app/lib/recipes.js` の最初の手順を変更させます。**Starter Kit のルート**で検証し、編集した App を開き直すか再インポートして、文章の変化を確認します。
 
    ```bash
+   npm ci --ignore-scripts --no-audit --no-fund
    npm test
    npm run verify
    ```
-
-4. AIUI Studio で `app.json` を直接含む `demos/cook-along/app` を選びます。デモの親フォルダーは選びません。後述の手順を Studio と実機でそれぞれ試します。
 
 GitHub からは次の正確な座標でインポートします。記録済みのソースを再現する場合、`main` の代わりに対応する commit を指定してください。
 
@@ -48,19 +51,17 @@ Directory: demos/cook-along/app
 
 タイマーは絶対終了時刻を基準にします。Page が非表示の間は表示更新を止め、再表示時に残り時間を計算します。Page を閉じるとセッションを破棄します。システムアラーム、音、バックグラウンドサービス、保存済みタイマーの復元はありません。ボタンはフォーカス・タップに対応し、ハードウェア入力は実機で確認する必要があります。
 
-## 最初に変更するファイル
+## 最初に変更する3か所
 
-以下は `demos/cook-along/` からの相対パスです。
+パスは `demos/cook-along/` からの相対パスです。まず次の**3か所**を変更します。
 
-| ファイル | 変更内容 |
-| --- | --- |
-| `app/lib/recipes.js` | レシピ ID、名称、手順、時間 |
-| `app/pages/index.ink` | 英語 UI、レイアウト、手順遷移、タイマー表示、フォーカス・タップ処理 |
-| `app/app.json` | App の情報と Page 宣言 |
-| `app/AGENTS.md` | 実行時 Agent がこの Page を開く方法 |
-| `tests/` | 変更した動作の回帰テスト |
+| 順序 | ファイル | 最初の変更 |
+| --- | --- | --- |
+| **1 · データ** | `app/lib/recipes.js` | レシピ名、手順、または `timerSeconds` |
+| **2 · UI** | `app/pages/index.ink` | 画面の見出し、ボタン文言、手順のレイアウト |
+| **3 · Agent のプロンプト** | `app/AGENTS.md` | 実行時 Agent の紹介と Page を開く指示。モデル API は不要 |
 
-レシピ ID を追加するときは、`app/pages/index.ink` の Page schema の列挙値と `app/AGENTS.md` の実行時指示も更新してください。各手順は一目で読める量にします。他のデモや自分の `app/` の外のファイルを App から参照しないでください。
+レシピ ID を追加するときは `app/pages/index.ink` の Page schema の列挙値と `app/AGENTS.md` の実行時指示も更新します。各手順を一目で読める量にしてください。App 情報は `app/app.json`、動作の回帰テストは `tests/` にあります。他のデモや自分の `app/` 外のファイルを App から参照しないでください。
 
 ## コピーして使える3つの依頼
 

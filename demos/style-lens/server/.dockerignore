@@ -1,0 +1,6 @@
+# Allow only the runtime source into the build context; .env is never sent.
+*
+!Dockerfile
+!package.json
+!server.mjs
+!prompt.mjs

@@ -1,0 +1,19 @@
+services:
+  style-lens:
+    build:
+      context: .
+    env_file: .env
+    environment:
+      # Override the native-development loopback default inside the container.
+      HOST: 0.0.0.0
+      PORT: "8787"
+    ports:
+      # A local TLS reverse proxy can reach this; it is not a public HTTP listener.
+      - "127.0.0.1:8787:8787"
+    init: true
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped

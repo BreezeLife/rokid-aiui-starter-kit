@@ -1,0 +1,72 @@
+[
+  {
+    "capture": "01-selector.png",
+    "start": 0,
+    "duration": 4,
+    "caption": "Choose a recipe",
+    "detail": "Coffee or pasta. Local recipe data; no API key."
+  },
+  {
+    "capture": "02-prepare.png",
+    "start": 4,
+    "duration": 3,
+    "caption": "Prepare your ingredients",
+    "detail": "Each screen shows one short instruction."
+  },
+  {
+    "capture": "03-bloom-ready.png",
+    "start": 7,
+    "duration": 3,
+    "caption": "Use an optional timer",
+    "detail": "Start it when you reach a timed step."
+  },
+  {
+    "capture": "04-timer-running.png",
+    "start": 10,
+    "duration": 2,
+    "caption": "Start the timer",
+    "detail": "The recorded screen shows 00:30."
+  },
+  {
+    "capture": "05-timer-elapsed.png",
+    "start": 12,
+    "duration": 2,
+    "caption": "Check remaining time",
+    "detail": "A later screenshot shows 00:22."
+  },
+  {
+    "capture": "06-timer-paused.png",
+    "start": 14,
+    "duration": 3,
+    "caption": "Pause when needed",
+    "detail": "Pause keeps the remaining time."
+  },
+  {
+    "capture": "07-timer-resumed.png",
+    "start": 17,
+    "duration": 2,
+    "caption": "Resume the timer",
+    "detail": "Continue from the paused time."
+  },
+  {
+    "capture": "08-pour.png",
+    "start": 19,
+    "duration": 3,
+    "caption": "Go to the next step",
+    "detail": "Next / Back clears the previous timer."
+  },
+  {
+    "capture": "09-serve.png",
+    "start": 22,
+    "duration": 3,
+    "caption": "Follow the final step",
+    "detail": "Read the instruction, then choose Finish."
+  },
+  {
+    "capture": "10-complete.png",
+    "start": 25,
+    "duration": 5,
+    "caption": "Finish or make it again",
+    "detail": "Choose another recipe or restart this one."
+  }
+]

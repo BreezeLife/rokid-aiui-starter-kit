@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "kind": "edited diagnostic browser screenshots",
+  "continuousScreenRecording": false,
+  "studioOrDeviceEvidence": false,
+  "runtime": {
+    "aiuiTarget": "0.19.0",
+    "patchedInk": true,
+    "details": "../../../verification/README.md#browser-observations-and-limitation"
+  },
+  "source": {
+    "verification": "../../../verification/results.json",
+    "fingerprint": "WORKTREE:c29724b24c4f70213f50ec0ffbb29141941b27a9a94a7b967b99ade067e6a218",
+    "diagnosticHtml": {
+      "path": "output/previews/style-lens-diagnostic.html",
+      "sha256": "5af8194b4ee0aec99fc418276fd7d7cc5ef9bbe8ea1d7b0393425ef438c1e959",
+      "embeddedFilesMatchFinalApp": true
+    }
+  },
+  "captures": [
+    {
+      "demo": "style-lens",
+      "name": "01-sample-work",
+      "capturedAt": "2026-10-22T19:05:35.562Z",
+      "path": "video-source/assets/captures/01-sample-work.png",
+      "sha256": "6385230be0eab367998bea3c0c2fd03af686f85e0521bdf3ca7ecdbea1b102ca",
+      "bytes": 52508,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "style-lens",
+      "name": "02-sample-weekend",
+      "capturedAt": "2026-10-22T19:05:42.537Z",
+      "path": "video-source/assets/captures/02-sample-weekend.png",
+      "sha256": "94be742c06c32a607c99b138b0aa72d93be17a278edd79d2e9cbb97cc00bea55",
+      "bytes": 53274,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "style-lens",
+      "name": "03-sample-evening",
+      "capturedAt": "2026-10-22T19:05:49.493Z",
+      "path": "video-source/assets/captures/03-sample-evening.png",
+      "sha256": "9a78dc34dba75ff4a4b12240daf21967ed45752da4b4b7f11d13fcdec31b9639",
+      "bytes": 54606,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "style-lens",
+      "name": "04-setup-needed",
+      "capturedAt": "2026-10-22T19:05:57.396Z",
+      "path": "video-source/assets/captures/04-setup-needed.png",
+      "sha256": "8e6b3499045eacc2ea82e8653ef2559fad882163de0b566268402e44dadb07ee",
+      "bytes": 48073,
+      "dimensions": [
+        1280,
+        720
+      ]
+    },
+    {
+      "demo": "style-lens",
+      "name": "05-back-to-sample",
+      "capturedAt": "2026-10-22T19:06:05.866Z",
+      "path": "video-source/assets/captures/05-back-to-sample.png",
+      "sha256": "9e64de489ea58dce5a0ad7814f8dfa08d5b17a9621f633f2d584464f4ad63e52",
+      "bytes": 54160,
+      "dimensions": [
+        1280,
+        720
+      ]
+    }
+  ],
+  "edits": {
+    "sourceCrop": {
+      "x": 178,
+      "y": 221,
+      "width": 480,
+      "height": 352
+    },
+    "scale": 1.45,
+    "placement": {
+      "x": 456,
+      "y": 112,
+      "width": 696,
+      "height": 510.4
+    },
+    "method": "Hard cuts and static holds; added English captions and persistent evidence disclosure. UI pixels and timer values are from original captures."
+  },
+  "timeline": "video-source/shots.json",
+  "tooling": {
+    "hyperframes": "0.8.186",
+    "gsap": {
+      "version": "3.14.2",
+      "url": "https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js",
+      "sha256": "c174bfce53a729418d57a8ad8625e7247c793a22fef8e2851e3cfa3de9cd8280",
+      "license": "https://gsap.com/standard-license",
+      "vendored": false
+    }
+  },
+  "reproduction": {
+    "cwd": "demos/style-lens/media/video-source",
+    "prepare": "node prepare.mjs",
+    "check": "npx --yes hyperframes@0.8.186 check . --json",
+    "render": "npx --yes hyperframes@0.8.186 render . --output ../demo.mp4 --fps 30 --quality delivery --workers 1"
+  },
+  "limitations": [
+    "Screenshot montage, not real-time interaction or timer playback.",
+    "Patched diagnostic browser; original Studio/device capture remains pending.",
+    "Sample/setup only. No live camera capture, provider request, or AI result was recorded."
+  ],
+  "video": {
+    "path": "demo.mp4",
+    "sha256": "1a867fd729a4e9e7f34bac980736d15e86ec7ea71accc9560b6a68a52e3a723a",
+    "bytes": 516357,
+    "durationSeconds": 30,
+    "frames": 900,
+    "width": 1280,
+    "height": 720,
+    "fps": "30/1",
+    "codec": "h264",
+    "pixelFormat": "yuv420p",
+    "audioStreams": 0
+  },
+  "review": {
+    "hyperframesCheck": "PASS: no lint/runtime/layout/contrast errors or warnings",
+    "acceptedCraftWarnings": [
+      "Silent by request"
+    ],
+    "decodedSamplesSeconds": [
+      0.3,
+      15,
+      29.9,
+      20
+    ],
+    "ffprobe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "pix_fmt": "yuv420p",
+          "r_frame_rate": "30/1",
+          "nb_frames": "900"
+        }
+      ],
+      "format": {
+        "duration": "30.000000",
+        "size": "516357"
+      }
+    },
+    "runtimeEnvironment": {
+      "node": "26.8.2",
+      "browser": "HeadlessChrome/152.0.7977.30",
+      "os": "darwin arm64",
+      "capture": "drawElement with screenshot verification",
+      "gpu": "Apple M1 Pro ANGLE Metal"
+    }
+  },
+  "compositionFiles": {
+    "video-source/compositions/shot-01.html": "67966c966139f1b2e291388d51597750a8ca193e4ae3bec6aa07ea0b47b60286",
+    "video-source/compositions/shot-02.html": "8dca133078f2db599c2cc155a2e50a0f215a859df38793956021a40d42588c1b",
+    "video-source/compositions/shot-03.html": "9bb076845ba0f1c66c21a126fd6ed1c6c5408ef38bb89e0fcedaa958ccac6c08",
+    "video-source/compositions/shot-04.html": "d38bb831302eeda5b1abd52829ae97694751a893b04eaa0d4cb8746d3608c9e2",
+    "video-source/compositions/shot-05.html": "b2c6ccd7d71d7a61e5177687f8520b0e89b131a8ec89c06bbca6aa0d939f5e98",
+    "video-source/index.html": "53cb11d0a0b08531e1be807d7ba389db640a0d4c36a83f52262e2cd1842dc296",
+    "video-source/prepare.mjs": "441fc78fb2c5f3b956c0cf9ae4cbd2678367d1a270a737300c9ae0bb7dcff825"
+  },
+  "poster": {
+    "path": "poster.png",
+    "source": "demo.mp4",
+    "timeSeconds": 0.3,
+    "sha256": "178a1aa772966677c1c063a2eb3763c5843337a274b116e9523160b71e7d9f90"
+  }
+}

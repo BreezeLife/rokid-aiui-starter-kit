@@ -1,6 +1,6 @@
 # Cook Along capture plan
 
-This is a plan, not captured product media. Capture owner: hackathon organizer/device tester. Required environment: AIUI Studio and target Rokid glasses on the exact package/runtime recorded by the root verification flow.
+A [30-second diagnostic screenshot walkthrough](demo.mp4) is now available; [media notes](README.md) describe its source and limits. It uses patched Ink 0.19 in a browser and is not Studio/device footage. The original Studio/device listing captures described below remain pending. Capture owner: hackathon organizer/device tester. Record the exact source fingerprint, runtime, glasses firmware, surface, timestamp and evidence layer when those captures are made.
 
 Before recording, bind each original file to source fingerprint, AIUI version, device/firmware, `_current` or `_blank`, timestamp and evidence layer. Keep unedited originals and note any crops/captions. Do not present an illustrative image or compatibility-patched browser diagnostic as device evidence.
 

@@ -9,10 +9,16 @@
 - [x] Inspect native browser previews, preserve their startup failure, and use a separate diagnostic runtime for limited UI checks.
 - [x] Record final source-bound UX/capability audits, submission drafts and remaining acceptance gates.
 
+- [x] Add shortest import/run/modify instructions, three first-edit entrypoints and three Vibe Coding prompts per demo in all three languages.
+- [x] Produce and verify two 30-second diagnostic screenshot walkthroughs with original captures, provenance and editable source.
+- [x] Add Style Lens Dockerfile/Compose deployment templates and verify isolated native startup, health and authentication behavior.
+- [x] Review all five requested starter deliverables in verification/hackathon-delivery.md.
+
 ## External acceptance still required
 - [ ] Resolve or retest the unmodified Ink 0.19 preview startup failure.
 - [ ] Import exact app roots into authenticated AIUI Studio and capture declared surfaces.
 - [ ] Verify physical glasses input, lifecycle, readability and Cook Along offline host launch.
+- [ ] Build/run the Style Lens Docker/Compose template on a Docker-equipped host.
 - [ ] Configure/deploy Style Lens HTTPS backend and verify real camera/provider behavior.
 - [ ] Supply trusted audit evidence and applicable version-specific PASS policies before release approval.
 - [ ] Produce original listing icons and actual Studio/device media before platform submission.

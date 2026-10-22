@@ -68,6 +68,8 @@ All entries below are Studio/device capture plans. Separate diagnostic browser c
 
 Official pinned [publishing requirements](https://github.com/yodaos-project/AIUI/blob/7d62c2d9ac1cdc1389ba06ed0651b395903accff/documentation/0-guide/bundle/publish.en-US.md) require 3–5 previews with at least one image and one video; square format, 15–45-second video and at most 50 MB per file are recommendations. Current portal dimensions/codec choices remain UNKNOWN. Do not publish a staged Sample recording as live model evidence.
 
+The actual [30-second diagnostic walkthrough](media/demo.mp4) and its [capture/source provenance](media/README.md) are available for starter onboarding. It does not complete the Studio/device media plans above.
+
 ## Verification and review notes
 
 - Executed local tests: `node --test demos/style-lens/tests/*.test.mjs` from repository root; 26/26 PASS under Node.js 24.19.0. Includes the documented `node --env-file=.env server.mjs` launch flow with dummy credentials and `/health`; no paid model call.
